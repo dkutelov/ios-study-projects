@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ZX-rb-z9Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ZX-rb-z9Q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,34 +27,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2To-P3-HTJ">
-                                <rect key="frame" x="16" y="152" width="382" height="242"/>
+                                <rect key="frame" x="16" y="152" width="382" height="244"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Rld-lb-J0a">
-                                        <rect key="frame" x="8" y="0.0" width="366" height="242"/>
+                                        <rect key="frame" x="8" y="0.0" width="366" height="244"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0d-xi-Y3H">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="22"/>
                                                 <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="SV8-wz-dGT">
-                                                <rect key="frame" x="0.0" y="70" width="366" height="172"/>
+                                                <rect key="frame" x="0.0" y="70.5" width="366" height="173.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-76-Vge">
-                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="55"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RgF-wh-HO8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="19"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="19.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Latitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoT-iu-ju3">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="19"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                                         <color key="textColor" name="TextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-7X-nRY">
-                                                                        <rect key="frame" x="71" y="0.0" width="295" height="19"/>
+                                                                        <rect key="frame" x="74" y="0.0" width="292" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                                         <color key="textColor" name="TextColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -62,16 +62,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-2e-cCP">
-                                                                <rect key="frame" x="0.0" y="35" width="366" height="19"/>
+                                                                <rect key="frame" x="0.0" y="35.5" width="366" height="19.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Longitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNr-ag-hCg">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="19"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                                         <color key="textColor" name="TextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-GP-rSf">
-                                                                        <rect key="frame" x="84.5" y="0.0" width="281.5" height="19"/>
+                                                                        <rect key="frame" x="87" y="0.0" width="279" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                                         <color key="textColor" name="TextColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -81,13 +81,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwk-Wj-pCQ">
-                                                        <rect key="frame" x="0.0" y="86" width="366" height="19"/>
+                                                        <rect key="frame" x="0.0" y="87" width="366" height="19.5"/>
                                                         <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwg-W8-xbA">
-                                                        <rect key="frame" x="0.0" y="137" width="366" height="35"/>
+                                                        <rect key="frame" x="0.0" y="138.5" width="366" height="35"/>
                                                         <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="19"/>
                                                         <state key="normal" title="Add Location to Diary">
                                                             <color key="titleColor" name="ButtonColor"/>
@@ -110,7 +110,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-tq-wHv">
-                                <rect key="frame" x="136.5" y="783" width="141" height="35"/>
+                                <rect key="frame" x="134.5" y="783" width="145" height="35"/>
                                 <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="19"/>
                                 <state key="normal" title="Get My Location">
                                     <color key="titleColor" name="ButtonColor"/>
@@ -189,20 +189,20 @@
                                         <rect key="frame" x="0.0" y="106" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VzP-Cj-Z5U" id="sgR-d9-wYC">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-v6-GVe">
-                                                    <rect key="frame" x="16" y="11.5" width="351" height="20.5"/>
+                                                    <rect key="frame" x="16" y="11.5" width="352.5" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0y-oa-BEE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="65.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="73" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enx-6k-aeP">
-                                                            <rect key="frame" x="69.5" y="0.0" width="281.5" height="20.5"/>
+                                                            <rect key="frame" x="77" y="0.0" width="275.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -238,13 +238,13 @@
                                                     <rect key="frame" x="16" y="11.5" width="382" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKc-Zb-hhq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="58.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="62" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHe-dJ-Y28">
-                                                            <rect key="frame" x="62.5" y="0.0" width="319.5" height="20.5"/>
+                                                            <rect key="frame" x="66" y="0.0" width="316" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -272,13 +272,13 @@
                                                     <rect key="frame" x="16" y="11.5" width="382" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gns-Qu-CAe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="972-Rf-oY7">
-                                                            <rect key="frame" x="76" y="0.0" width="306" height="20.5"/>
+                                                            <rect key="frame" x="79" y="0.0" width="303" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -340,13 +340,13 @@
                                                     <rect key="frame" x="16" y="11.5" width="382" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eit-Nw-XZ8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="33.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="37.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJh-ws-4yG">
-                                                            <rect key="frame" x="37.5" y="0.0" width="344.5" height="20.5"/>
+                                                            <rect key="frame" x="41.5" y="0.0" width="340.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="16"/>
                                                             <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -408,7 +408,7 @@
                         <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="HrF-eH-t5x">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HrF-eH-t5x" id="Y34-Ps-bwv">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -539,23 +539,23 @@
                         <color key="separatorColor" name="Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LocationCell" id="nRz-S9-2XW" customClass="LocationTableViewCell" customModule="Bilbo_s_Diary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="58"/>
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="59.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nRz-S9-2XW" id="IOa-gi-egh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8cj-9I-XIx">
-                                            <rect key="frame" x="20" y="8" width="374" height="42"/>
+                                            <rect key="frame" x="20" y="8" width="374" height="43.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUA-FY-q4C">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
                                                     <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="18"/>
                                                     <color key="textColor" name="TextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGc-RD-z7l">
-                                                    <rect key="frame" x="0.0" y="25" width="374" height="17"/>
+                                                    <rect key="frame" x="0.0" y="26" width="374" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="RingbearerMedium" family="Ringbearer" pointSize="14"/>
                                                     <color key="textColor" name="TextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -617,7 +617,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Luj-L0-pzR"/>
+        <segue reference="xKZ-0t-WuY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bg_image" width="256" height="256"/>
