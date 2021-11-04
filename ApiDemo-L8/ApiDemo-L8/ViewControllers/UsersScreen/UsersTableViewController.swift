@@ -6,12 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class UsersTableViewController: UITableViewController {
 
-    var users: [User] {
-        return LocalData.users
-    }
+    var users: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +21,29 @@ class UsersTableViewController: UITableViewController {
         super.viewWillAppear(true)
 
         NotificationCenter.default.addObserver(forName: .userDataLoaded, object: nil, queue: nil) {[weak self] _ in
-            print("hi")
+            self?.loadData()
             self?.tableView.reloadData()
         }
+        self.loadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    // MARK: - Load data
+    func loadData() {
+        users.removeAll()
+        
+        DispatchQueue.main.async {
+            let filteredAndSortedUsers = LocalDataManager.realm.objects(User.self)
+                .filter({ user in user.height > 0.9 })//.filter("height > %f", 1.7)
+                .sorted(by: { $0.firstName < $1.firstName}) //.sorted(byKeyPath: "firstName", ascending: true)
+            
+            self.users.append(contentsOf: filteredAndSortedUsers)
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -45,7 +59,7 @@ class UsersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.userReusableCellIdentifier, for: indexPath) as? UserTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userReusableCell", for: indexPath) as? UserTableViewCell else {
             return UITableViewCell()
         }
         
@@ -55,50 +69,17 @@ class UsersTableViewController: UITableViewController {
         return cell
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let currentObj = users[indexPath.row]
+        // if need to modify, can not the object, should write in realm
+        
+        DispatchQueue.main.async {
+            try? LocalDataManager.realm.write {
+                currentObj.firstName = "Obi"
+            }
+            self.loadData()
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -34,9 +34,8 @@ class UserTableViewCell: UITableViewCell {
     }
     
     func setupWith(data: User) {
-        setAvatarImage(with: data.avatarUrl)
-        usernameLabel.text = data.username
-        emailLabel.text = data.email
+        
+        usernameLabel.text = "\(data.firstName) \(data.lastName)"
     }
 
 }

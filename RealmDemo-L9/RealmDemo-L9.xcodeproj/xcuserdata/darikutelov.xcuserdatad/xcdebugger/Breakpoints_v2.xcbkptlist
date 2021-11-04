@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E0D3897-B582-4422-8AFC-57A345D8B630"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "558B3FEF-C359-4392-941B-8A7FD5EB68E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealmDemo-L9/Managers/RequestManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchAllUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7703890-9CE9-489D-8758-8199CF99EA00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RealmDemo-L9/Controllers/NewUserViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "validateAndSaveData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F7703890-9CE9-489D-8758-8199CF99EA00 - bd55c5943822eb4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in RealmDemo_L9.NewUserViewController.validateAndSaveData() -&gt; ()"
+                  moduleName = "RealmDemo-L9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darikutelov/Documents/Study/Swift/swift-study-projects/RealmDemo-L9/RealmDemo-L9/Controllers/NewUserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1104">
+               </Location>
+               <Location
+                  uuid = "F7703890-9CE9-489D-8758-8199CF99EA00 - ee74364aab8eff5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; () in RealmDemo_L9.NewUserViewController.validateAndSaveData() -&gt; ()"
+                  moduleName = "RealmDemo-L9"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darikutelov/Documents/Study/Swift/swift-study-projects/RealmDemo-L9/RealmDemo-L9/Controllers/NewUserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -87,7 +87,6 @@
 				B12BF0092733E38C0034F36D /* Notofication.swift */,
 				B12BEFEE2732EF950034F36D /* Info.plist */,
 				B12BEFF42732F0320034F36D /* Constants.swift */,
-				B12BF0002733D0AF0034F36D /* UserDefaultData.swift */,
 			);
 			path = "ApiDemo-L8";
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B12BEFFC2732F1490034F36D /* ReguestManager.swift */,
+				B12BF0002733D0AF0034F36D /* UserDefaultData.swift */,
 				B12BF0072733D8040034F36D /* LocalData.swift */,
 			);
 			path = Managers;

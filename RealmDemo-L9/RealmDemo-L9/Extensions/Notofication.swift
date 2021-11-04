@@ -8,5 +8,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let userDataLoaded = Notification.Name(rawValue: "userDataLoaed")
+    static let userDataLoaded = Notification.Name(rawValue: "userDataLoaded")
 }
