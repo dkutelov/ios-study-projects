@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Exam
 //
-//  Created by Dari Kutelov on 4.11.21.
+//  Created by Dari Kutelov on 6.11.21.
 //
 
 import UIKit

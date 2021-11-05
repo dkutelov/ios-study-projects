@@ -1,14 +1,12 @@
 //
 //  LocalDataManager.swift
-//  RealmDemo-L9
+//  ExamPrep
 //
-//  Created by Dari Kutelov on 4.11.21.
+//  Created by Dari Kutelov on 5.11.21.
 //
 
 import Foundation
 import RealmSwift
-import Realm
-
 
 enum LocalDataManagerError: Error {
     case wrongQueue
@@ -40,4 +38,19 @@ class LocalDataManager {
             throw error
         }
     }
+    
+    static let favoriteCoins: Favorites = {
+        if let favoriteObj =  LocalDataManager.realm.object(ofType: Favorites.self, forPrimaryKey: "123") {
+            return favoriteObj
+        }
+        
+        let favoriteObj = Favorites()
+        favoriteObj.userId = "123"
+        LocalDataManager.realm.beginWrite()
+        realm.add(favoriteObj, update: .all)
+        try? LocalDataManager.realm.commitWrite()
+        
+        return favoriteObj
+    }()
 }
+

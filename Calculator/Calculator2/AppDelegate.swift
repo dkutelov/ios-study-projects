@@ -1,8 +1,6 @@
 //
 //  AppDelegate.swift
-//  ExamPrep
-//
-//  Created by Dari Kutelov on 4.11.21.
+//  Calculator2
 //
 
 import UIKit
@@ -10,14 +8,10 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
-            RequestManager.fetchAllMarketData { error in
-                print(error?.localizedDescription ?? "")
-            }
-        }
-        
+        // Override point for customization after application launch.
         return true
     }
 

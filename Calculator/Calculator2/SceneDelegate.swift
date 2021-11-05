@@ -1,8 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Exam
-//
-//  Created by Dari Kutelov on 6.11.21.
+//  Calculator2
 //
 
 import UIKit

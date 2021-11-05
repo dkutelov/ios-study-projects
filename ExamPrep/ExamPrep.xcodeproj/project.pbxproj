@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B12BF044273411E90034F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF043273411E90034F36D /* AppDelegate.swift */; };
 		B12BF046273411E90034F36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF045273411E90034F36D /* SceneDelegate.swift */; };
-		B12BF048273411E90034F36D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF047273411E90034F36D /* ViewController.swift */; };
 		B12BF04B273411E90034F36D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12BF049273411E90034F36D /* Main.storyboard */; };
 		B12BF04D273411EB0034F36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12BF04C273411EB0034F36D /* Assets.xcassets */; };
 		B12BF050273411EB0034F36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12BF04E273411EB0034F36D /* LaunchScreen.storyboard */; };
@@ -17,17 +16,36 @@
 		B12BF05B273412300034F36D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B12BF05A273412300034F36D /* RealmSwift */; };
 		B12BF086273413100034F36D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B12BF085273413100034F36D /* Alamofire */; };
 		B12BF08F273413690034F36D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B12BF08E273413690034F36D /* SDWebImage */; };
+		B12BF0B12735270B0034F36D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0B02735270B0034F36D /* Constants.swift */; };
+		B12BF0B52735279B0034F36D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0B42735279B0034F36D /* Coin.swift */; };
+		B12BF0B72735292D0034F36D /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0B62735292D0034F36D /* LocalDataManager.swift */; };
+		B12BF0B92735293E0034F36D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0B82735293E0034F36D /* RequestManager.swift */; };
+		B12BF0C027352D0B0034F36D /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0BF27352D0B0034F36D /* NotificationName.swift */; };
+		B12BF0C6273532B90034F36D /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0C5273532B90034F36D /* MarketTableViewController.swift */; };
+		B12BF0C9273536A40034F36D /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0C8273536A40034F36D /* CoinTableViewCell.swift */; };
+		B12BF0CB273556270034F36D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0CA273556270034F36D /* Double.swift */; };
+		B12BF0CD273562C10034F36D /* FavoriteCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0CC273562C10034F36D /* FavoriteCoins.swift */; };
+		B12BF0CF27357FF70034F36D /* CoinDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BF0CE27357FF70034F36D /* CoinDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B12BF040273411E90034F36D /* ExamPrep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamPrep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12BF043273411E90034F36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B12BF045273411E90034F36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B12BF047273411E90034F36D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B12BF04A273411E90034F36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B12BF04C273411EB0034F36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B12BF04F273411EB0034F36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B12BF051273411EB0034F36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B12BF0B02735270B0034F36D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B12BF0B42735279B0034F36D /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		B12BF0B62735292D0034F36D /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		B12BF0B82735293E0034F36D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		B12BF0BF27352D0B0034F36D /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		B12BF0C5273532B90034F36D /* MarketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
+		B12BF0C8273536A40034F36D /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		B12BF0CA273556270034F36D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		B12BF0CC273562C10034F36D /* FavoriteCoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoins.swift; sourceTree = "<group>"; };
+		B12BF0CE27357FF70034F36D /* CoinDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +84,62 @@
 			children = (
 				B12BF043273411E90034F36D /* AppDelegate.swift */,
 				B12BF045273411E90034F36D /* SceneDelegate.swift */,
-				B12BF047273411E90034F36D /* ViewController.swift */,
+				B12BF0BE27352CE90034F36D /* Extensions */,
+				B12BF0AC2735252B0034F36D /* Managers */,
+				B12BF0AB273524EC0034F36D /* Model */,
 				B12BF049273411E90034F36D /* Main.storyboard */,
+				B12BF0C4273532880034F36D /* Controllers */,
 				B12BF04C273411EB0034F36D /* Assets.xcassets */,
 				B12BF04E273411EB0034F36D /* LaunchScreen.storyboard */,
 				B12BF051273411EB0034F36D /* Info.plist */,
+				B12BF0B02735270B0034F36D /* Constants.swift */,
 			);
 			path = ExamPrep;
+			sourceTree = "<group>";
+		};
+		B12BF0AB273524EC0034F36D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B12BF0B42735279B0034F36D /* Coin.swift */,
+				B12BF0CC273562C10034F36D /* FavoriteCoins.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B12BF0AC2735252B0034F36D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B12BF0B62735292D0034F36D /* LocalDataManager.swift */,
+				B12BF0B82735293E0034F36D /* RequestManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B12BF0BE27352CE90034F36D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B12BF0BF27352D0B0034F36D /* NotificationName.swift */,
+				B12BF0CA273556270034F36D /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B12BF0C4273532880034F36D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B12BF0C7273532BF0034F36D /* Market */,
+				B12BF0CE27357FF70034F36D /* CoinDetailTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B12BF0C7273532BF0034F36D /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				B12BF0C5273532B90034F36D /* MarketTableViewController.swift */,
+				B12BF0C8273536A40034F36D /* CoinTableViewCell.swift */,
+			);
+			path = Market;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +223,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B12BF048273411E90034F36D /* ViewController.swift in Sources */,
+				B12BF0C027352D0B0034F36D /* NotificationName.swift in Sources */,
 				B12BF044273411E90034F36D /* AppDelegate.swift in Sources */,
 				B12BF046273411E90034F36D /* SceneDelegate.swift in Sources */,
+				B12BF0B52735279B0034F36D /* Coin.swift in Sources */,
+				B12BF0B92735293E0034F36D /* RequestManager.swift in Sources */,
+				B12BF0C6273532B90034F36D /* MarketTableViewController.swift in Sources */,
+				B12BF0C9273536A40034F36D /* CoinTableViewCell.swift in Sources */,
+				B12BF0B12735270B0034F36D /* Constants.swift in Sources */,
+				B12BF0CB273556270034F36D /* Double.swift in Sources */,
+				B12BF0CF27357FF70034F36D /* CoinDetailTableViewController.swift in Sources */,
+				B12BF0CD273562C10034F36D /* FavoriteCoins.swift in Sources */,
+				B12BF0B72735292D0034F36D /* LocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,12 @@
 //
 //  LocalDataManager.swift
-//  RealmDemo-L9
+//  Exam
 //
-//  Created by Dari Kutelov on 4.11.21.
+//  Created by Dari Kutelov on 6.11.21.
 //
 
 import Foundation
 import RealmSwift
-import Realm
 
 
 enum LocalDataManagerError: Error {
