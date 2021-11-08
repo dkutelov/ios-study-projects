@@ -14,6 +14,10 @@
 		B1C68FFC27391114008B74FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C68FFA27391114008B74FE /* LaunchScreen.storyboard */; };
 		B1C69008273911F4008B74FE /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69007273911F4008B74FE /* Reminder.swift */; };
 		B1C6900A273912A6008B74FE /* RemiderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C69009273912A6008B74FE /* RemiderService.swift */; };
+		B1C6900C273945A9008B74FE /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6900B273945A9008B74FE /* RemindersViewController.swift */; };
+		B1C6900E2739460C008B74FE /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6900D2739460C008B74FE /* ReminderCell.swift */; };
+		B1C6901027394A28008B74FE /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6900F27394A28008B74FE /* FavoriteViewController.swift */; };
+		B1C6901227396282008B74FE /* NewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C6901127396282008B74FE /* NewReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		B1C68FFD27391114008B74FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C69007273911F4008B74FE /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		B1C69009273912A6008B74FE /* RemiderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemiderService.swift; sourceTree = "<group>"; };
+		B1C6900B273945A9008B74FE /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		B1C6900D2739460C008B74FE /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		B1C6900F27394A28008B74FE /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		B1C6901127396282008B74FE /* NewReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,10 @@
 		B1C690042739114D008B74FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B1C6900B273945A9008B74FE /* RemindersViewController.swift */,
+				B1C6900D2739460C008B74FE /* ReminderCell.swift */,
+				B1C6900F27394A28008B74FE /* FavoriteViewController.swift */,
+				B1C6901127396282008B74FE /* NewReminderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,9 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C6900A273912A6008B74FE /* RemiderService.swift in Sources */,
+				B1C6901227396282008B74FE /* NewReminderViewController.swift in Sources */,
+				B1C6900E2739460C008B74FE /* ReminderCell.swift in Sources */,
 				B1C69008273911F4008B74FE /* Reminder.swift in Sources */,
+				B1C6901027394A28008B74FE /* FavoriteViewController.swift in Sources */,
 				B1C68FF027391113008B74FE /* AppDelegate.swift in Sources */,
 				B1C68FF227391113008B74FE /* SceneDelegate.swift in Sources */,
+				B1C6900C273945A9008B74FE /* RemindersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
