@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Exam
+//  Reminders
 //
-//  Created by Dari Kutelov on 6.11.21.
+//  Created by Dari Kutelov on 8.11.21.
 //
 
 import UIKit
@@ -13,11 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        RequestManager.fetchDailyBlocks { error in
-            print(error?.localizedDescription ?? "")
-        }
-        
+        // Override point for customization after application launch.
         return true
     }
 

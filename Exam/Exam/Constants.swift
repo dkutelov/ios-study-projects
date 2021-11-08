@@ -8,5 +8,7 @@
 import Foundation
 
 struct API {
-    static let someURL = ""
+    static let dailyBlocksUrl = "https://blockchain.info/blocks/"
+    static let blockDetailUrl = "https://blockchain.info/rawblock/"
+    static let accountUrl = "https://blockchain.info/rawaddr/"
 }

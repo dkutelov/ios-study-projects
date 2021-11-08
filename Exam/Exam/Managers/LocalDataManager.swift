@@ -32,7 +32,7 @@ class LocalDataManager {
         
         do {
             var configuration =  Realm.Configuration.defaultConfiguration
-            configuration.schemaVersion = 1
+            configuration.schemaVersion = 3
             configuration.deleteRealmIfMigrationNeeded = true
             return try Realm(configuration: configuration, queue: queue)
         } catch {

@@ -31,6 +31,9 @@ class MarketTableViewController: UITableViewController {
         }
     }
     
+
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let coinDetailViewController = segue.destination as? CoinDetailTableViewController,
            let coinCell = sender as? CoinTableViewCell,

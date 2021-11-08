@@ -9,7 +9,9 @@ import Foundation
 
 
 extension Notification.Name {
-    static let marketDataLoaded = Notification.Name(rawValue: "marketDataLoaded")
+    static let blocksDataLoaded = Notification.Name(rawValue: "blocksDataLoaded")
+    static let blocksDatailsLoaded = Notification.Name(rawValue: "blocksDatailsLoaded")
+    static let accountDataLoaded = Notification.Name(rawValue: "accountDataLoaded")
 }
 
 

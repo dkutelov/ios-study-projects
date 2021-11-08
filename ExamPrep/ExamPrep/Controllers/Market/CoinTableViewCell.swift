@@ -27,8 +27,9 @@ class CoinTableViewCell: UITableViewCell {
     // MARK: - Lifecycle Events
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.coinImageView.h
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
