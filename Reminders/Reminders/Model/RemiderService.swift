@@ -92,5 +92,10 @@ class ReminderService {
     }
     
     // Get favorite reminder
-    func getFavoriteReminder() -> Reminder? { reminders.first }
+    func getFavoriteReminder() -> Reminder? {
+
+        var allReminder = Array(reminders)
+        allReminder.shuffle()
+        return allReminder.randomElement()
+    }
 }
