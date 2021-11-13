@@ -17,14 +17,12 @@ class RideQuoteService {
     
     func getQuotes(pickupLocation: Location, dropoffLocation: Location) -> [RideQuote] {
         
-        // MARK: - Get Distance between 2 locations
+        // Get Distance between 2 locations
         // convert to CLLocation
         let location1 = CLLocation(latitude: pickupLocation.lat, longitude: pickupLocation.lng)
         let location2 = CLLocation(latitude: dropoffLocation.lat, longitude: dropoffLocation.lng)
         
-        // in meters
-        let distance = location1.distance(from: location2)
-        
+        let distance = location1.distance(from: location2)  // in meters
         let minAmount = 3.0
         
         return [

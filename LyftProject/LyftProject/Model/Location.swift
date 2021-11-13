@@ -3,7 +3,6 @@
 //  LyftProject
 //
 //  Created by Dari Kutelov on 11.11.21.
-//
 
 import Foundation
 
