@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C64257127425A67000429D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C64257027425A67000429D7 /* HomeViewController.swift */; };
+		9C64257427426623000429D7 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C64257327426623000429D7 /* LocationCell.swift */; };
+		9C6425762742D75C000429D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6425752742D75C000429D7 /* Constants.swift */; };
+		9C6425792742D930000429D7 /* ButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6425782742D930000429D7 /* ButtonShadow.swift */; };
+		9C64257B274392DE000429D7 /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C64257A274392DE000429D7 /* VehicleAnnotation.swift */; };
+		9CA8CBCA2745816B00C41701 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8CBC92745816B00C41701 /* LocationViewController.swift */; };
 		B1278386273D76C9002582C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1278385273D76C9002582C2 /* AppDelegate.swift */; };
 		B1278388273D76C9002582C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1278387273D76C9002582C2 /* SceneDelegate.swift */; };
 		B127838D273D76C9002582C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B127838B273D76C9002582C2 /* Main.storyboard */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C64257027425A67000429D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9C64257327426623000429D7 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		9C6425752742D75C000429D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C6425782742D930000429D7 /* ButtonShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShadow.swift; sourceTree = "<group>"; };
+		9C64257A274392DE000429D7 /* VehicleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotation.swift; sourceTree = "<group>"; };
+		9CA8CBC92745816B00C41701 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B1278382273D76C9002582C2 /* LyftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1278385273D76C9002582C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1278387273D76C9002582C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +57,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C64256F27425A46000429D7 /* VControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C642572274265F7000429D7 /* HomeScreen */,
+				9CA8CBCB2745818500C41701 /* LocationsScreen */,
+			);
+			path = VControllers;
+			sourceTree = "<group>";
+		};
+		9C642572274265F7000429D7 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9C64257027425A67000429D7 /* HomeViewController.swift */,
+				9C64257327426623000429D7 /* LocationCell.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		9C6425772742D904000429D7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				9C6425782742D930000429D7 /* ButtonShadow.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		9CA8CBCB2745818500C41701 /* LocationsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9CA8CBC92745816B00C41701 /* LocationViewController.swift */,
+			);
+			path = LocationsScreen;
+			sourceTree = "<group>";
+		};
 		B1278379273D76C8002582C2 = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +112,7 @@
 			children = (
 				B1278399273D774F002582C2 /* Model */,
 				B127839A273D7774002582C2 /* View */,
-				B127839B273D7786002582C2 /* Controller */,
+				9C64256F27425A46000429D7 /* VControllers */,
 				B127839C273D77A0002582C2 /* Supporting Files */,
 				B127838E273D76CC002582C2 /* Assets.xcassets */,
 				B1278393273D76CC002582C2 /* Info.plist */,
@@ -80,6 +126,7 @@
 				B127839F273D789F002582C2 /* Services */,
 				B127839D273D7805002582C2 /* Location.swift */,
 				B12783A4273D7C29002582C2 /* RideQuote.swift */,
+				9C64257A274392DE000429D7 /* VehicleAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,17 +134,11 @@
 		B127839A273D7774002582C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C6425772742D904000429D7 /* CustomViews */,
 				B1278390273D76CC002582C2 /* LaunchScreen.storyboard */,
 				B127838B273D76C9002582C2 /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		B127839B273D7786002582C2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		B127839C273D77A0002582C2 /* Supporting Files */ = {
@@ -106,6 +147,7 @@
 				B12783A2273D7A69002582C2 /* locations.json */,
 				B1278385273D76C9002582C2 /* AppDelegate.swift */,
 				B1278387273D76C9002582C2 /* SceneDelegate.swift */,
+				9C6425752742D75C000429D7 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -190,12 +232,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C64257B274392DE000429D7 /* VehicleAnnotation.swift in Sources */,
 				B12783A7273D7D04002582C2 /* RideQuoteService.swift in Sources */,
 				B1278386273D76C9002582C2 /* AppDelegate.swift in Sources */,
+				9CA8CBCA2745816B00C41701 /* LocationViewController.swift in Sources */,
 				B127839E273D7805002582C2 /* Location.swift in Sources */,
 				B12783A1273D78AF002582C2 /* LocationService.swift in Sources */,
 				B12783A5273D7C29002582C2 /* RideQuote.swift in Sources */,
+				9C6425792742D930000429D7 /* ButtonShadow.swift in Sources */,
+				9C64257127425A67000429D7 /* HomeViewController.swift in Sources */,
+				9C64257427426623000429D7 /* LocationCell.swift in Sources */,
 				B1278388273D76C9002582C2 /* SceneDelegate.swift in Sources */,
+				9C6425762742D75C000429D7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
