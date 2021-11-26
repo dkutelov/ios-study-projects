@@ -24,6 +24,7 @@ class LocationViewController: UIViewController {
     var searchCompleter = MKLocalSearchCompleter()
     var searchResults = [MKLocalSearchCompletion]()
     
+    //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +32,31 @@ class LocationViewController: UIViewController {
         locations = LocationService.shared.getRecentLocations()
         
         dropoffTextField.becomeFirstResponder()
+        
         // delegates
         dropoffTextField.delegate = self
         searchCompleter.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // show navigation bar; in Main.storybard select view controller and top bar -> Opaque Navigation Bar
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let routeViewController = segue.destination as? RouteViewController,
+           let dropoffLocation = sender as? Location {
+            routeViewController.pickupLocation = pickupLocation
+            routeViewController.dropoffLocation = dropoffLocation
+        }
+    }
+    
+    //MARK: - IBActions
+    
+    @IBAction func cancelDidTapped(_ sender: UIBarButtonItem) {
+        // dismiss view controller in navigation
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -51,7 +74,7 @@ extension LocationViewController: UITextFieldDelegate {
     }
 }
 
-// MARK: - TableView DataSource
+// MARK: - Table View DataSource
 
 extension LocationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,6 +95,30 @@ extension LocationViewController: UITableViewDataSource {
         return cell
     }
 }
+
+// MARK: - Table View Delegate
+
+extension LocationViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchResults.isEmpty {
+            let dropoffLocation = locations[indexPath.row]
+            performSegue(withIdentifier: SegueId.routeSegue, sender: dropoffLocation)
+        } else {
+            let searchResult = searchResults[indexPath.row]
+            let searchRequest = MKLocalSearch.Request(completion: searchResult)
+            let search = MKLocalSearch(request: searchRequest)
+            search.start(completionHandler: {(response, error) in
+                if error == nil {
+                    if let dropoffPlacemark = response?.mapItems.first?.placemark {
+                        let location = Location(placemark: dropoffPlacemark)
+                        self.performSegue(withIdentifier: SegueId.routeSegue, sender: location)
+                    }
+                }
+            })
+        }
+    }
+}
+
 
 // MARK: - MKLocalSearchCompleter Delegate
 

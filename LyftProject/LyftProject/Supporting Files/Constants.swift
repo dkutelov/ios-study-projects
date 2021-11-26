@@ -9,8 +9,15 @@ import Foundation
 
 struct CellIds {
     static let locationCell = "locationCell"
+    static let rideQuoteCell = "rideQuoteCell"
 }
+
+struct SegueId {
+    static let routeSegue = "routeSegue"
+}
+
 
 struct K {
     static let VehicleAnnotation = "VehicleAnnotation"
+    static let LocationAnnotation = "LocationAnnotation"
 }

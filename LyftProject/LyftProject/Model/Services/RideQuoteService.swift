@@ -26,9 +26,9 @@ class RideQuoteService {
         let minAmount = 3.0
         
         return [
-            RideQuote(thumbnail: "ride-shared", name: "Shared", capacity: "1-2", price: minAmount + distance * 0.5, time: Date()),
-            RideQuote(thumbnail: "ride-compact", name: "Compact", capacity: "4", price: minAmount + distance * 0.9, time: Date()),
-            RideQuote(thumbnail: "ride-large", name: "Large", capacity: "6", price: minAmount + distance * 1.5, time: Date())
+            RideQuote(thumbnail: "ride-shared", name: "Shared", capacity: "1-2", price: minAmount + distance * 0.005, time: Date()),
+            RideQuote(thumbnail: "ride-compact", name: "Compact", capacity: "4", price: minAmount + distance * 0.009, time: Date()),
+            RideQuote(thumbnail: "ride-large", name: "Large", capacity: "6", price: minAmount + distance * 0.015, time: Date())
         ]
     }
 }

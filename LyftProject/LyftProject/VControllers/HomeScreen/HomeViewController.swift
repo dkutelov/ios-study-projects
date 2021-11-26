@@ -12,12 +12,16 @@ import MapKit
 class HomeViewController: UIViewController {
 
     // MARK: - IBOutlets
+    
     @IBOutlet weak var searchButton: UIButton!
     
     //MARK: - Properties
+    
     var locations = [Location]()
     var locationManager: CLLocationManager!
     var currentUserLocation: Location!
+    
+    //MARK: - Live Cicle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +39,22 @@ class HomeViewController: UIViewController {
         searchButton.layer.shadowColor = UIColor.black.cgColor
         searchButton.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         searchButton.layer.shadowOpacity = 0.5
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // hide navigation bar; also in view select navigation bar - none
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let locationViewController = segue.destination as? LocationViewController {
+            locationViewController.pickupLocation = currentUserLocation
+        } else if let routeViewController = segue.destination as? RouteViewController,
+                    let dropoffLocation = sender as? Location {
+            routeViewController.pickupLocation = currentUserLocation
+            routeViewController.dropoffLocation = dropoffLocation
+        }
     }
     
     // MARK: - Private methods
@@ -69,12 +89,23 @@ extension HomeViewController: UITableViewDataSource {
     
 }
 
+// MARK: - Table View Delegate
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dropoffLocation = locations[indexPath.row]
+        
+        performSegue(withIdentifier: SegueId.routeSegue, sender: dropoffLocation)
+    }
+}
+
 // MARK: - Location Manager
 
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let firstLocation = locations.first!
         currentUserLocation = Location(title: "Current Location", subtitle: "", lat: firstLocation.coordinate.latitude, lng: firstLocation.coordinate.longitude)
+        print(firstLocation.coordinate.latitude, firstLocation.coordinate.longitude)
         locationManager.stopUpdatingLocation() // saves battery
     }
     
@@ -90,7 +121,7 @@ extension HomeViewController: CLLocationManagerDelegate {
 extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         // zoom in to the user location
-        let distance = 500.0
+        let distance = 1000.0
         let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: distance, longitudinalMeters: distance)
         mapView.setRegion(region, animated: true)
         
@@ -131,3 +162,5 @@ extension HomeViewController: MKMapViewDelegate {
         return annotationView
     }
 }
+
+
