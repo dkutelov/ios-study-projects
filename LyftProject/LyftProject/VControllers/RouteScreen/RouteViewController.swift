@@ -65,7 +65,28 @@ class RouteViewController: UIViewController {
         displayRoute(sourceLocation: pickupLocation!, destinationLocation: dropoffLocation!)
      }
     
-    func displayRoute(sourceLocation: Location, destinationLocation: Location) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let driverViewController = segue.destination as? DriverViewController {
+            driverViewController.pickupLocation = pickupLocation
+            driverViewController.dropoffLocation = dropoffLocation
+        }
+    }
+    
+    
+    // MARK: - IBActions
+    
+    @IBAction func backButtonDidTap(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - Private methods
+    
+    private func displayRoute(sourceLocation: Location, destinationLocation: Location) {
         let sourceCoordinate = CLLocationCoordinate2D(latitude: sourceLocation.lat, longitude: sourceLocation.lng)
         let destinationCoordinate = CLLocationCoordinate2D(latitude: destinationLocation.lat, longitude: destinationLocation.lng)
         

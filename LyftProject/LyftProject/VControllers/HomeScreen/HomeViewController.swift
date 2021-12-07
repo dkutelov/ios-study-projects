@@ -105,7 +105,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let firstLocation = locations.first!
         currentUserLocation = Location(title: "Current Location", subtitle: "", lat: firstLocation.coordinate.latitude, lng: firstLocation.coordinate.longitude)
-        print(firstLocation.coordinate.latitude, firstLocation.coordinate.longitude)
+        //print(firstLocation.coordinate.latitude, firstLocation.coordinate.longitude)
         locationManager.stopUpdatingLocation() // saves battery
     }
     
@@ -126,41 +126,41 @@ extension HomeViewController: MKMapViewDelegate {
         mapView.setRegion(region, animated: true)
         
         //3 vehicle annotations
-        let lat = userLocation.coordinate.latitude
-        let lng = userLocation.coordinate.longitude
-        let offset = 0.000756
-        let coord1 = CLLocationCoordinate2D(latitude: lat - offset, longitude: lng - offset)
-        let coord2 = CLLocationCoordinate2D(latitude: lat, longitude: lng + offset)
-        let coord3 = CLLocationCoordinate2D(latitude: lat, longitude: lng - offset)
+//        let lat = userLocation.coordinate.latitude
+//        let lng = userLocation.coordinate.longitude
+//        let offset = 0.000756
+//        let coord1 = CLLocationCoordinate2D(latitude: lat - offset, longitude: lng - offset)
+//        let coord2 = CLLocationCoordinate2D(latitude: lat, longitude: lng + offset)
+//        let coord3 = CLLocationCoordinate2D(latitude: lat, longitude: lng - offset)
         
-        mapView.addAnnotations([
-            VehicleAnnotation(coordinate: coord1),
-            VehicleAnnotation(coordinate: coord2),
-            VehicleAnnotation(coordinate: coord3),
-        ])
+//        mapView.addAnnotations([
+//            VehicleAnnotation(coordinate: coord1),
+//            VehicleAnnotation(coordinate: coord2),
+//            VehicleAnnotation(coordinate: coord3),
+//        ])
     }
     
     // change annotation icon
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    //func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         // do not chage for user
-        if annotation is MKUserLocation {
-            return nil
-        }
+//        if annotation is MKUserLocation {
+//            return nil
+//        }
         
         // Custom annotation view with vehicle image
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: K.VehicleAnnotation)
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: K.VehicleAnnotation)
-        } else {
-            annotationView?.annotation = annotation
-        }
-        
-        annotationView?.image = UIImage(named: "car")
+//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: K.VehicleAnnotation)
+//
+//        if annotationView == nil {
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: K.VehicleAnnotation)
+//        } else {
+//            annotationView?.annotation = annotation
+//        }
+//
+//        annotationView?.image = UIImage(named: "car")
         // rotationAngle is in radian
-        annotationView?.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360) * 180) / CGFloat.pi)
-        return annotationView
-    }
+//        annotationView?.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360) * 180) / CGFloat.pi)
+//        return annotationView
+    //}
 }
 
 
