@@ -10,4 +10,5 @@ import Foundation
 struct K {
     static let categoryCell = "CategoryCell"
     static let albumCell = "albumCell"
+    static let songCell = "SongCell"
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0FD164277325BC0057369C /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FD163277325BC0057369C /* SongCell.swift */; };
+		9C0FD166277327100057369C /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FD165277327100057369C /* AlbumViewController.swift */; };
 		9C73BDB22770EA3C00BEDB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDB12770EA3C00BEDB96 /* AppDelegate.swift */; };
 		9C73BDB42770EA3C00BEDB96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDB32770EA3C00BEDB96 /* SceneDelegate.swift */; };
 		9C73BDB92770EA3C00BEDB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C73BDB72770EA3C00BEDB96 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C0FD163277325BC0057369C /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		9C0FD165277327100057369C /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		9C73BDAE2770EA3C00BEDB96 /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C73BDB12770EA3C00BEDB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C73BDB32770EA3C00BEDB96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0FD1622773257E0057369C /* AlbumScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9C0FD163277325BC0057369C /* SongCell.swift */,
+				9C0FD165277327100057369C /* AlbumViewController.swift */,
+			);
+			path = AlbumScreen;
+			sourceTree = "<group>";
+		};
 		9C73BDA52770EA3C00BEDB96 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				9C73BDD42771154600BEDB96 /* HomeScreen */,
+				9C0FD1622773257E0057369C /* AlbumScreen */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0FD166277327100057369C /* AlbumViewController.swift in Sources */,
 				9C73BDCA2770EAE000BEDB96 /* Song.swift in Sources */,
+				9C0FD164277325BC0057369C /* SongCell.swift in Sources */,
 				9C73BDCE2770EBBA00BEDB96 /* Category.swift in Sources */,
 				9C73BDB22770EA3C00BEDB96 /* AppDelegate.swift in Sources */,
 				9C73BDDA277118D900BEDB96 /* AlbumCell.swift in Sources */,
