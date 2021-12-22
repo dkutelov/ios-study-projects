@@ -199,6 +199,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Follow">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="followButtonDidTapped:" destination="9LL-oN-nm8" eventType="touchUpInside" id="Wv3-vQ-zIQ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="73 followers by spotify" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n6-H4-9mC">
                                         <rect key="frame" x="23.5" y="231" width="143" height="16"/>

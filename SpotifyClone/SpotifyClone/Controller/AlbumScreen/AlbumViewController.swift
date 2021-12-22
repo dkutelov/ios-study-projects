@@ -24,11 +24,15 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         
         album = CategoryService.shared.categories.first!.albums.randomElement()
-        updateAlbum(album: album)
+        updateAlbum(with: album)
         setButtonsRadiusAndBorder()
+        updateFollowingButton()
+        
+        let primaryColor = UIColor.red.cgColor
+        updateBackground(with: primaryColor)
     }
     
-    // Private methods
+    //MARK: - Private methods
     private func setButtonsRadiusAndBorder() {
         shuffleButton.layer.cornerRadius = 10.0
         followButton.layer.cornerRadius = 5.0
@@ -36,9 +40,42 @@ class AlbumViewController: UIViewController {
         followButton.layer.borderColor = UIColor.white.cgColor
     }
     
-    private func updateAlbum(album: Album) {
+    private func updateFollowingButton() {
+        if UserService.shared.isFollowingAlbum(album: album) {
+            followButton.setTitle("Following", for: .normal)
+            followButton.layer.borderColor = UIColor(red: 42.0 / 255.0, green: 183.0 / 255.0, blue: 89.0 / 255.0, alpha: 1.0).cgColor
+            followButton.setTitleColor(UIColor(red: 42.0 / 255.0, green: 183.0 / 255.0, blue: 89.0 / 255.0, alpha: 1.0), for: .normal)
+        } else {
+            followButton.setTitle("Follow", for: .normal)
+            followButton.layer.borderColor = UIColor.white.cgColor
+            followButton.setTitleColor(UIColor.white, for: .normal)
+        }
+    }
+    
+    private func updateAlbum(with album: Album) {
         thumbnailImageView.image = UIImage(named: album.image)
         titleLabel.text = album.name
+        descriptionLabel.text = "\(album.followers) followers - by \(album.artist)"
+    }
+    
+    private func updateBackground(with color: CGColor) {
+        let backgroundColor = view.backgroundColor!.cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.frame
+        gradientLayer.colors = [color, backgroundColor]
+        gradientLayer.locations = [0.0, 0.4] // takes 0-1 and defines where gradient will stop
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    //MARK: - IBActions
+    
+    @IBAction func followButtonDidTapped(_ sender: UIButton) {
+        if UserService.shared.isFollowingAlbum(album: album) {
+            UserService.shared.unfollowAlbum(album: album)
+        } else {
+            UserService.shared.followAlbum(album: album)
+        }
+        updateFollowingButton()
         descriptionLabel.text = "\(album.followers) followers - by \(album.artist)"
     }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9C0FD164277325BC0057369C /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FD163277325BC0057369C /* SongCell.swift */; };
 		9C0FD166277327100057369C /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FD165277327100057369C /* AlbumViewController.swift */; };
+		9C0FD16827737A600057369C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FD16727737A600057369C /* User.swift */; };
+		9C0FD16A27737AA40057369C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0FD16927737AA40057369C /* UserService.swift */; };
 		9C73BDB22770EA3C00BEDB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDB12770EA3C00BEDB96 /* AppDelegate.swift */; };
 		9C73BDB42770EA3C00BEDB96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDB32770EA3C00BEDB96 /* SceneDelegate.swift */; };
 		9C73BDB92770EA3C00BEDB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C73BDB72770EA3C00BEDB96 /* Main.storyboard */; };
@@ -23,11 +25,14 @@
 		9C73BDDA277118D900BEDB96 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDD9277118D900BEDB96 /* AlbumCell.swift */; };
 		9C73BDDC27711A3400BEDB96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDDB27711A3400BEDB96 /* HomeViewController.swift */; };
 		9C73BDDE27711BD900BEDB96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDDD27711BD900BEDB96 /* Constants.swift */; };
+		9CA1953F27739AD1000974B2 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 9CA1953E27739AD1000974B2 /* UIImageColors */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C0FD163277325BC0057369C /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		9C0FD165277327100057369C /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		9C0FD16727737A600057369C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9C0FD16927737AA40057369C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9C73BDAE2770EA3C00BEDB96 /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C73BDB12770EA3C00BEDB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C73BDB32770EA3C00BEDB96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA1953F27739AD1000974B2 /* UIImageColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +106,7 @@
 			children = (
 				9C73BDCF2770EC4D00BEDB96 /* Service */,
 				9C73BDC92770EAE000BEDB96 /* Song.swift */,
+				9C0FD16727737A600057369C /* User.swift */,
 				9C73BDCB2770EB3300BEDB96 /* Album.swift */,
 				9C73BDCD2770EBBA00BEDB96 /* Category.swift */,
 			);
@@ -139,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				9C73BDD02770EC7200BEDB96 /* CategoryService.swift */,
+				9C0FD16927737AA40057369C /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -169,6 +177,9 @@
 			dependencies = (
 			);
 			name = SpotifyClone;
+			packageProductDependencies = (
+				9CA1953E27739AD1000974B2 /* UIImageColors */,
+			);
 			productName = SpotifyClone;
 			productReference = 9C73BDAE2770EA3C00BEDB96 /* SpotifyClone.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 9C73BDA52770EA3C00BEDB96;
+			packageReferences = (
+				9CA1953D27739AD1000974B2 /* XCRemoteSwiftPackageReference "UIImageColors" */,
+			);
 			productRefGroup = 9C73BDAF2770EA3C00BEDB96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0FD16A27737AA40057369C /* UserService.swift in Sources */,
+				9C0FD16827737A600057369C /* User.swift in Sources */,
 				9C0FD166277327100057369C /* AlbumViewController.swift in Sources */,
 				9C73BDCA2770EAE000BEDB96 /* Song.swift in Sources */,
 				9C0FD164277325BC0057369C /* SongCell.swift in Sources */,
@@ -454,6 +470,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CA1953D27739AD1000974B2 /* XCRemoteSwiftPackageReference "UIImageColors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jathu/UIImageColors.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CA1953E27739AD1000974B2 /* UIImageColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CA1953D27739AD1000974B2 /* XCRemoteSwiftPackageReference "UIImageColors" */;
+			productName = UIImageColors;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C73BDA62770EA3C00BEDB96 /* Project object */;
 }
