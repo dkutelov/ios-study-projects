@@ -15,6 +15,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         categories = CategoryService.shared.getCategories()
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let albumViewController = segue.destination as? AlbumViewController,
+            let album = sender as? Album {
+            albumViewController.album = album
+        }
     }
 }
 
@@ -53,6 +61,13 @@ extension HomeViewController: UICollectionViewDataSource {
         
         return albumCell
     }
-    
-    
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let categoryIndex = collectionView.tag
+        let category = categories[categoryIndex]
+        let album = category.albums[indexPath.row]
+        performSegue(withIdentifier: K.AlbumSegue, sender: album)
+    }
 }

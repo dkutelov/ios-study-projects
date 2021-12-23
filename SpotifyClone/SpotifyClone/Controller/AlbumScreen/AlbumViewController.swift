@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIImageColors
 
 class AlbumViewController: UIViewController {
     
@@ -23,13 +24,18 @@ class AlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        album = CategoryService.shared.categories.first!.albums.randomElement()
+       // album = CategoryService.shared.categories.first!.albums.randomElement()
         updateAlbum(with: album)
         setButtonsRadiusAndBorder()
         updateFollowingButton()
         
-        let primaryColor = UIColor.red.cgColor
-        updateBackground(with: primaryColor)
+        thumbnailImageView.image?.getColors({ colors in
+            if let primaryColor = colors?.primary.withAlphaComponent(0.8).cgColor {
+                self.updateBackground(with: primaryColor)
+            }
+        })
+        
+        
     }
     
     //MARK: - Private methods
@@ -60,10 +66,21 @@ class AlbumViewController: UIViewController {
     
     private func updateBackground(with color: CGColor) {
         let backgroundColor = view.backgroundColor!.cgColor
+        
+        print(backgroundColor)
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.frame
-        gradientLayer.colors = [color, backgroundColor]
+        gradientLayer.colors = [backgroundColor, backgroundColor]
         gradientLayer.locations = [0.0, 0.4] // takes 0-1 and defines where gradient will stop
+        
+        // smoothen gradient by adding animation
+        let gradientChangeColor = CABasicAnimation(keyPath: "colors") // keyPath is matching gradientLayer.colors
+        gradientChangeColor.duration = 0.25
+        gradientChangeColor.toValue = [color, backgroundColor]
+        gradientChangeColor.isRemovedOnCompletion = false
+        gradientChangeColor.fillMode = .forwards
+        gradientLayer.add(gradientChangeColor, forKey: "colors")
+        
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
@@ -77,6 +94,11 @@ class AlbumViewController: UIViewController {
         }
         updateFollowingButton()
         descriptionLabel.text = "\(album.followers) followers - by \(album.artist)"
+    }
+    
+    @IBAction func backbuttonDidTapped(_ sender: UIButton) {
+        
+        navigationController?.popViewController(animated: true)
     }
 }
 
