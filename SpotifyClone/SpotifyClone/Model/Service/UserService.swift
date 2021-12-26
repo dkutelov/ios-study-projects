@@ -31,4 +31,20 @@ class UserService {
     func isFollowingAlbum(album: Album) -> Bool {
         return currentUser.followingAlbums.contains(album.name)
     }
+    
+    func favoriteSong(this song: Song) {
+        if !isFavoritedSong(this: song) {
+            currentUser.favoriteSongs.append(song.title)
+        }
+    }
+    
+    func unfavoriteSong(this song: Song) {
+        if let index = currentUser.favoriteSongs.firstIndex(of: song.title) {
+            currentUser.favoriteSongs.remove(at: index)
+        }
+    }
+    
+    func isFavoritedSong(this song: Song) -> Bool {
+        return currentUser.favoriteSongs.contains(song.title)
+    }
 }

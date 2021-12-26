@@ -15,6 +15,8 @@
 		9C45A6882774E4AF008CE2D6 /* song-0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C45A6852774E4AE008CE2D6 /* song-0.mp3 */; };
 		9C45A6892774E4AF008CE2D6 /* song-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C45A6862774E4AE008CE2D6 /* song-2.mp3 */; };
 		9C45A68A2774E4AF008CE2D6 /* song-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C45A6872774E4AE008CE2D6 /* song-1.mp3 */; };
+		9C45A68D2774EB93008CE2D6 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45A68C2774EB93008CE2D6 /* SongViewController.swift */; };
+		9C45A69027750F75008CE2D6 /* MarqueeLabel in Frameworks */ = {isa = PBXBuildFile; productRef = 9C45A68F27750F75008CE2D6 /* MarqueeLabel */; };
 		9C73BDB22770EA3C00BEDB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDB12770EA3C00BEDB96 /* AppDelegate.swift */; };
 		9C73BDB42770EA3C00BEDB96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73BDB32770EA3C00BEDB96 /* SceneDelegate.swift */; };
 		9C73BDB92770EA3C00BEDB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C73BDB72770EA3C00BEDB96 /* Main.storyboard */; };
@@ -41,6 +43,7 @@
 		9C45A6852774E4AE008CE2D6 /* song-0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "song-0.mp3"; sourceTree = "<group>"; };
 		9C45A6862774E4AE008CE2D6 /* song-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "song-2.mp3"; sourceTree = "<group>"; };
 		9C45A6872774E4AE008CE2D6 /* song-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "song-1.mp3"; sourceTree = "<group>"; };
+		9C45A68C2774EB93008CE2D6 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		9C73BDAE2770EA3C00BEDB96 /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C73BDB12770EA3C00BEDB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C73BDB32770EA3C00BEDB96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C45A69027750F75008CE2D6 /* MarqueeLabel in Frameworks */,
 				9CA1953F27739AD1000974B2 /* UIImageColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +82,14 @@
 				9C0FD165277327100057369C /* AlbumViewController.swift */,
 			);
 			path = AlbumScreen;
+			sourceTree = "<group>";
+		};
+		9C45A68B2774E647008CE2D6 /* SongScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9C45A68C2774EB93008CE2D6 /* SongViewController.swift */,
+			);
+			path = SongScreen;
 			sourceTree = "<group>";
 		};
 		9C73BDA52770EA3C00BEDB96 = {
@@ -135,6 +147,7 @@
 			children = (
 				9C73BDD42771154600BEDB96 /* HomeScreen */,
 				9C0FD1622773257E0057369C /* AlbumScreen */,
+				9C45A68B2774E647008CE2D6 /* SongScreen */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 			name = SpotifyClone;
 			packageProductDependencies = (
 				9CA1953E27739AD1000974B2 /* UIImageColors */,
+				9C45A68F27750F75008CE2D6 /* MarqueeLabel */,
 			);
 			productName = SpotifyClone;
 			productReference = 9C73BDAE2770EA3C00BEDB96 /* SpotifyClone.app */;
@@ -222,6 +236,7 @@
 			mainGroup = 9C73BDA52770EA3C00BEDB96;
 			packageReferences = (
 				9CA1953D27739AD1000974B2 /* XCRemoteSwiftPackageReference "UIImageColors" */,
+				9C45A68E27750F75008CE2D6 /* XCRemoteSwiftPackageReference "MarqueeLabel" */,
 			);
 			productRefGroup = 9C73BDAF2770EA3C00BEDB96 /* Products */;
 			projectDirPath = "";
@@ -263,6 +278,7 @@
 				9C73BDCE2770EBBA00BEDB96 /* Category.swift in Sources */,
 				9C73BDB22770EA3C00BEDB96 /* AppDelegate.swift in Sources */,
 				9C73BDDA277118D900BEDB96 /* AlbumCell.swift in Sources */,
+				9C45A68D2774EB93008CE2D6 /* SongViewController.swift in Sources */,
 				9C73BDD8277115A900BEDB96 /* CategoryCell.swift in Sources */,
 				9C73BDDE27711BD900BEDB96 /* Constants.swift in Sources */,
 				9C73BDDC27711A3400BEDB96 /* HomeViewController.swift in Sources */,
@@ -488,6 +504,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9C45A68E27750F75008CE2D6 /* XCRemoteSwiftPackageReference "MarqueeLabel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cbpowell/MarqueeLabel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		9CA1953D27739AD1000974B2 /* XCRemoteSwiftPackageReference "UIImageColors" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jathu/UIImageColors.git";
@@ -499,6 +523,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9C45A68F27750F75008CE2D6 /* MarqueeLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C45A68E27750F75008CE2D6 /* XCRemoteSwiftPackageReference "MarqueeLabel" */;
+			productName = MarqueeLabel;
+		};
 		9CA1953E27739AD1000974B2 /* UIImageColors */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9CA1953D27739AD1000974B2 /* XCRemoteSwiftPackageReference "UIImageColors" */;

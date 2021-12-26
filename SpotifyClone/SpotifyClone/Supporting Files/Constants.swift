@@ -12,4 +12,7 @@ struct K {
     static let albumCell = "albumCell"
     static let songCell = "SongCell"
     static let AlbumSegue = "AlbumSegue"
+    static let SongSegue = "SongSegue"
+    static let TagPause = 0
+    static let TagPlay = 1
 }

@@ -20,6 +20,7 @@ class AlbumViewController: UIViewController {
     
     // MARK: - Properties
     var album: Album!
+    var albumPrimaryColor: CGColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +32,23 @@ class AlbumViewController: UIViewController {
         
         thumbnailImageView.image?.getColors({ colors in
             if let primaryColor = colors?.primary.withAlphaComponent(0.8).cgColor {
+                self.albumPrimaryColor = primaryColor
                 self.updateBackground(with: primaryColor)
             }
         })
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let songViewController = segue.destination as? SongViewController, let songIndex = sender as? Int{
+            songViewController.album = album
+            songViewController.selectedSongIndex = songIndex
+            songViewController.albumPrimartColor = albumPrimaryColor
+        }
+    }
+    
+    //change status bar color to white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     //MARK: - Private methods
@@ -66,8 +79,6 @@ class AlbumViewController: UIViewController {
     
     private func updateBackground(with color: CGColor) {
         let backgroundColor = view.backgroundColor!.cgColor
-        
-        print(backgroundColor)
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.frame
         gradientLayer.colors = [backgroundColor, backgroundColor]
@@ -97,8 +108,13 @@ class AlbumViewController: UIViewController {
     }
     
     @IBAction func backbuttonDidTapped(_ sender: UIButton) {
-        
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func sufflePlayButtonDidTapped(_ sender: UIButton) {
+        let randomIndex = Int(arc4random_uniform(UInt32(album.songs.count)))
+        performSegue(withIdentifier: K.SongSegue, sender: randomIndex)
     }
 }
 
@@ -117,5 +133,13 @@ extension AlbumViewController: UITableViewDataSource {
         let song = album.songs[indexPath.row]
         songCell.update(song:song)
         return songCell
+    }
+}
+
+// MARK: - Table view delegate
+
+extension AlbumViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: K.SongSegue, sender: indexPath.row)
     }
 }

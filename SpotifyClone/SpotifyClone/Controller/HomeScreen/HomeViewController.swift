@@ -24,6 +24,11 @@ class HomeViewController: UIViewController {
             albumViewController.album = album
         }
     }
+    
+    //change status bar color to white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
