@@ -32,6 +32,7 @@
 		9CFB2120277864D90092C5CB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB211F277864D90092C5CB /* StorageManager.swift */; };
 		9CFB2122277865020092C5CB /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB2121277865020092C5CB /* HapticsManager.swift */; };
 		9CFB2124277865220092C5CB /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB2123277865220092C5CB /* AnalyticsManager.swift */; };
+		9CFB212627786A7F0092C5CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB212527786A7F0092C5CB /* GoogleService-Info.plist */; };
 		BA3B00B7D1A52D5E1C3BFC53 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065D487AB04FDD30FF47CD34 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		9CFB211F277864D90092C5CB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		9CFB2121277865020092C5CB /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		9CFB2123277865220092C5CB /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		9CFB212527786A7F0092C5CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		9CFB20FA277857DD0092C5CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CFB212527786A7F0092C5CB /* GoogleService-Info.plist */,
 				9C1C86962777929D00F644C6 /* Assets.xcassets */,
 				9C1C868D2777929C00F644C6 /* AppDelegate.swift */,
 				9C1C868F2777929C00F644C6 /* SceneDelegate.swift */,
@@ -274,6 +277,7 @@
 			files = (
 				9C1C869A2777929D00F644C6 /* LaunchScreen.storyboard in Resources */,
 				9C1C86972777929D00F644C6 /* Assets.xcassets in Resources */,
+				9CFB212627786A7F0092C5CB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
