@@ -12,6 +12,10 @@
 		9C1C86922777929C00F644C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C86912777929C00F644C6 /* HomeViewController.swift */; };
 		9C1C86972777929D00F644C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1C86962777929D00F644C6 /* Assets.xcassets */; };
 		9C1C869A2777929D00F644C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1C86982777929D00F644C6 /* LaunchScreen.storyboard */; };
+		9C3E65552779BB8300451479 /* SigninHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E65542779BB8300451479 /* SigninHeaderView.swift */; };
+		9C3E65572779BD1500451479 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E65562779BD1500451479 /* Extensions.swift */; };
+		9C3E6559277B194E00451479 /* InstagramTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E6558277B194E00451479 /* InstagramTextField.swift */; };
+		9C3E655B277B2DC600451479 /* InstagramButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E655A277B2DC600451479 /* InstagramButton.swift */; };
 		9CFB20FD277862720092C5CB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB20FC277862720092C5CB /* ExploreViewController.swift */; };
 		9CFB20FF277862B00092C5CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB20FE277862B00092C5CB /* CameraViewController.swift */; };
 		9CFB2101277862D90092C5CB /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB2100277862D90092C5CB /* NotificationsViewController.swift */; };
@@ -47,6 +51,10 @@
 		9C1C86962777929D00F644C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1C86992777929D00F644C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1C869B2777929D00F644C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3E65542779BB8300451479 /* SigninHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninHeaderView.swift; sourceTree = "<group>"; };
+		9C3E65562779BD1500451479 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9C3E6558277B194E00451479 /* InstagramTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTextField.swift; sourceTree = "<group>"; };
+		9C3E655A277B2DC600451479 /* InstagramButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramButton.swift; sourceTree = "<group>"; };
 		9CFB20FC277862720092C5CB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		9CFB20FE277862B00092C5CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		9CFB2100277862D90092C5CB /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				9C1C86982777929D00F644C6 /* LaunchScreen.storyboard */,
+				9C3E65542779BB8300451479 /* SigninHeaderView.swift */,
+				9C3E6558277B194E00451479 /* InstagramTextField.swift */,
+				9C3E655A277B2DC600451479 /* InstagramButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 				9C1C86962777929D00F644C6 /* Assets.xcassets */,
 				9C1C868D2777929C00F644C6 /* AppDelegate.swift */,
 				9C1C868F2777929C00F644C6 /* SceneDelegate.swift */,
+				9C3E65562779BD1500451479 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -335,8 +347,11 @@
 				9CFB21052778637D0092C5CB /* TabBarViewController.swift in Sources */,
 				9CFB211A277864900092C5CB /* Notification.swift in Sources */,
 				9CFB210E2778641A0092C5CB /* ListViewController.swift in Sources */,
+				9C3E65552779BB8300451479 /* SigninHeaderView.swift in Sources */,
 				9CFB2122277865020092C5CB /* HapticsManager.swift in Sources */,
+				9C3E655B277B2DC600451479 /* InstagramButton.swift in Sources */,
 				9CFB2110277864230092C5CB /* PostViewController.swift in Sources */,
+				9C3E6559277B194E00451479 /* InstagramTextField.swift in Sources */,
 				9CFB20FD277862720092C5CB /* ExploreViewController.swift in Sources */,
 				9CFB210A277863CE0092C5CB /* SignupViewController.swift in Sources */,
 				9CFB20FF277862B00092C5CB /* CameraViewController.swift in Sources */,
@@ -349,6 +364,7 @@
 				9CFB2118277864770092C5CB /* Relationship.swift in Sources */,
 				9CFB2116277864620092C5CB /* Post.swift in Sources */,
 				9CFB211C277864A80092C5CB /* AuthManager.swift in Sources */,
+				9C3E65572779BD1500451479 /* Extensions.swift in Sources */,
 				9CFB2103277862E70092C5CB /* ProfileViewController.swift in Sources */,
 				9C1C868E2777929C00F644C6 /* AppDelegate.swift in Sources */,
 				9C1C86902777929C00F644C6 /* SceneDelegate.swift in Sources */,

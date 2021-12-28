@@ -8,30 +8,66 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
+    var homeViewController: UIViewController?
+    var exploreViewController: UIViewController?
+    var cameraViewController: UIViewController?
+    var activityViewController: UIViewController?
+    var profileViewController: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Define VC
+        updateTabBar()
+    }
+    
+    private func updateTabBar() {
         let home = HomeViewController()
         let explore = ExploreViewController()
         let camera = CameraViewController()
         let activity = NotificationsViewController()
         let profile = ProfileViewController()
         
-        let nav1 = UINavigationController(rootViewController: home)
-        let nav2 = UINavigationController(rootViewController: explore)
-        let nav3 = UINavigationController(rootViewController: camera)
-        let nav4 = UINavigationController(rootViewController: activity)
-        let nav5 = UINavigationController(rootViewController: profile)
-
-        // Define tabs
-        nav1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
-        nav2.tabBarItem = UITabBarItem(title: "Explore", image: UIImage(systemName: "safari"), tag: 2)
-        nav3.tabBarItem = UITabBarItem(title: "Camera", image: UIImage(systemName: "camera"), tag: 3)
-        nav4.tabBarItem = UITabBarItem(title: "Notifications", image: UIImage(systemName: "bell"), tag: 4)
-        nav5.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 5)
-        // Set view controllers
-        self.setViewControllers([nav1, nav2, nav3, nav4, nav5], animated: false)
+        homeViewController = UINavigationController(rootViewController: home)
+        exploreViewController = UINavigationController(rootViewController: explore)
+        cameraViewController = UINavigationController(rootViewController: camera)
+        activityViewController = UINavigationController(rootViewController: activity)
+        profileViewController = UINavigationController(rootViewController: profile)
+        
+        if let homeViewController = homeViewController,
+            let exploreViewController = exploreViewController,
+            let cameraViewController = cameraViewController,
+            let activityViewController = activityViewController,
+            let profileViewController = profileViewController {
+            
+            setTabBarItems(homeViewController, exploreViewController, cameraViewController, activityViewController, profileViewController)
+            
+            self.setViewControllers([homeViewController,
+                                     exploreViewController,
+                                     cameraViewController,
+                                     activityViewController,
+                                     profileViewController], animated: false)
+        }
+    }
+    
+    private func setTabBarItems(_ homeViewController: UIViewController,
+                                _ exploreViewController: UIViewController,
+                                _ cameraViewController: UIViewController,
+                                _ activityViewController: UIViewController,
+                                _ profileViewController: UIViewController) {
+        
+        homeViewController.tabBarItem = UITabBarItem(title: "Home",
+                                    image: UIImage(systemName: "house"),
+                                    tag: 1)
+        exploreViewController.tabBarItem = UITabBarItem(title: "Explore",
+                                    image: UIImage(systemName: "safari"),
+                                    tag: 2)
+        cameraViewController.tabBarItem = UITabBarItem(title: "Camera",
+                                    image: UIImage(systemName: "camera"),
+                                    tag: 3)
+        activityViewController.tabBarItem = UITabBarItem(title: "Notifications",
+                                    image: UIImage(systemName: "bell"),
+                                    tag: 4)
+        profileViewController.tabBarItem = UITabBarItem(title: "Profile",
+                                    image: UIImage(systemName: "person.circle"),
+                                    tag: 5)
     }
 }
