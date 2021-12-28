@@ -110,13 +110,25 @@ class SigninViewController: UIViewController {
         privacyButton.addTarget(self, action: #selector(didTapPrivacy), for: .touchUpInside)
     }
     
+    private func presentError() {
+        let alert = UIAlertController(title: "Woops", message: "All fields shoud be filled! Password should be min 6 char long! Username should be alphanumeric!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
+    
     //MARK: - Actions
     @objc func didTapSignIn() {
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        
         guard let email = emailField.text,
               let password = passwordField.text,
               !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty,
-              password.count >= 6 else { return }
+              password.count >= 6 else {
+                  presentError()
+                  return
+              }
     }
     
     @objc func didTapCreateAccount() {
