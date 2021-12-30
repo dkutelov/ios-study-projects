@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C4603A5277E3B40005CD112 /* Vacation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603A4277E3B40005CD112 /* Vacation.swift */; };
+		9C4603A9277E413D005CD112 /* VacationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603A7277E413D005CD112 /* VacationTableViewCell.swift */; };
+		9C4603AA277E413D005CD112 /* VacationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4603A8277E413D005CD112 /* VacationTableViewCell.xib */; };
+		9CC70A14277E1676004C4D60 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */; };
+		9CC70A15277E1676004C4D60 /* LoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */; };
+		9CC70A17277E1FBC004C4D60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */; };
 		B110F42B277DE9F000FCB938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F42A277DE9F000FCB938 /* AppDelegate.swift */; };
 		B110F42D277DE9F000FCB938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F42C277DE9F000FCB938 /* SceneDelegate.swift */; };
-		B110F42F277DE9F000FCB938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F42E277DE9F000FCB938 /* ViewController.swift */; };
 		B110F432277DE9F000FCB938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B110F430277DE9F000FCB938 /* Main.storyboard */; };
 		B110F434277DE9F100FCB938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B110F433277DE9F100FCB938 /* Assets.xcassets */; };
 		B110F437277DE9F100FCB938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B110F435277DE9F100FCB938 /* LaunchScreen.storyboard */; };
@@ -17,15 +22,18 @@
 		B110F442277DEADC00FCB938 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F441277DEADC00FCB938 /* CardView.swift */; };
 		B110F445277DEAE900FCB938 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F443277DEAE900FCB938 /* RoundedButton.swift */; };
 		B110F446277DEAE900FCB938 /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F444277DEAE900FCB938 /* ShadowCardView.swift */; };
-		B110F450277DEFDC00FCB938 /* LoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B110F44E277DEFDC00FCB938 /* LoginRegisterViewController.xib */; };
-		B110F451277DEFDC00FCB938 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F44F277DEFDC00FCB938 /* LoginRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C4603A4277E3B40005CD112 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Vacation.swift; path = "bon-voyage/Models/Vacation.swift"; sourceTree = SOURCE_ROOT; };
+		9C4603A7277E413D005CD112 /* VacationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VacationTableViewCell.swift; path = "bon-voyage/Cells/VacationTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		9C4603A8277E413D005CD112 /* VacationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VacationTableViewCell.xib; path = "bon-voyage/Cells/VacationTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRegisterViewController.swift; path = "bon-voyage/LoginRegister/LoginRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginRegisterViewController.xib; path = "bon-voyage/LoginRegister/LoginRegisterViewController.xib"; sourceTree = SOURCE_ROOT; };
+		9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "bon-voyage/Controllers/HomeViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B110F427277DE9F000FCB938 /* Bon-voyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bon-voyage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B110F42A277DE9F000FCB938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B110F42C277DE9F000FCB938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B110F42E277DE9F000FCB938 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B110F431277DE9F000FCB938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B110F433277DE9F100FCB938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B110F436277DE9F100FCB938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,8 +42,6 @@
 		B110F441277DEADC00FCB938 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B110F443277DEAE900FCB938 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B110F444277DEAE900FCB938 /* ShadowCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowCardView.swift; sourceTree = "<group>"; };
-		B110F44E277DEFDC00FCB938 /* LoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginRegisterViewController.xib; path = "Bon-voyage/LoginRegisterViewController.xib"; sourceTree = SOURCE_ROOT; };
-		B110F44F277DEFDC00FCB938 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRegisterViewController.swift; path = "Bon-voyage/LoginRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C4603A3277E3B20005CD112 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C4603A4277E3B40005CD112 /* Vacation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9C4603A6277E4113005CD112 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9C4603A7277E413D005CD112 /* VacationTableViewCell.swift */,
+				9C4603A8277E413D005CD112 /* VacationTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9CC70A11277E15C7004C4D60 /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */,
+				9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
 		B110F41E277DE9F000FCB938 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +100,14 @@
 		B110F429277DE9F000FCB938 /* Bon-voyage */ = {
 			isa = PBXGroup;
 			children = (
-				B110F44D277DEF7800FCB938 /* LoginRegister */,
+				9C4603A6277E4113005CD112 /* Cells */,
+				9C4603A3277E3B20005CD112 /* Models */,
+				9CC70A11277E15C7004C4D60 /* LoginRegister */,
 				B110F440277DEAC100FCB938 /* Custom Views */,
 				B110F42A277DE9F000FCB938 /* AppDelegate.swift */,
 				B110F42C277DE9F000FCB938 /* SceneDelegate.swift */,
 				B110F430277DE9F000FCB938 /* Main.storyboard */,
 				B110F433277DE9F100FCB938 /* Assets.xcassets */,
-				B110F448277DEC1900FCB938 /* Models */,
 				B110F447277DEC0400FCB938 /* Controllers */,
 				B110F435277DE9F100FCB938 /* LaunchScreen.storyboard */,
 				B110F438277DE9F100FCB938 /* Info.plist */,
@@ -96,25 +129,9 @@
 		B110F447277DEC0400FCB938 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B110F42E277DE9F000FCB938 /* ViewController.swift */,
+				9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		B110F448277DEC1900FCB938 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B110F44D277DEF7800FCB938 /* LoginRegister */ = {
-			isa = PBXGroup;
-			children = (
-				B110F44F277DEFDC00FCB938 /* LoginRegisterViewController.swift */,
-				B110F44E277DEFDC00FCB938 /* LoginRegisterViewController.xib */,
-			);
-			path = LoginRegister;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B110F422277DE9F000FCB938 /* Build configuration list for PBXProject "Bon-voyage" */;
+			buildConfigurationList = B110F422277DE9F000FCB938 /* Build configuration list for PBXProject "bon-voyage" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -174,8 +191,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4603AA277E413D005CD112 /* VacationTableViewCell.xib in Resources */,
 				B110F437277DE9F100FCB938 /* LaunchScreen.storyboard in Resources */,
-				B110F450277DEFDC00FCB938 /* LoginRegisterViewController.xib in Resources */,
+				9CC70A15277E1676004C4D60 /* LoginRegisterViewController.xib in Resources */,
 				B110F434277DE9F100FCB938 /* Assets.xcassets in Resources */,
 				B110F432277DE9F000FCB938 /* Main.storyboard in Resources */,
 			);
@@ -188,12 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4603A9277E413D005CD112 /* VacationTableViewCell.swift in Sources */,
 				B110F43F277DEAB700FCB938 /* DemoData.swift in Sources */,
 				B110F445277DEAE900FCB938 /* RoundedButton.swift in Sources */,
-				B110F42F277DE9F000FCB938 /* ViewController.swift in Sources */,
-				B110F451277DEFDC00FCB938 /* LoginRegisterViewController.swift in Sources */,
+				9C4603A5277E3B40005CD112 /* Vacation.swift in Sources */,
+				9CC70A17277E1FBC004C4D60 /* HomeViewController.swift in Sources */,
 				B110F42B277DE9F000FCB938 /* AppDelegate.swift in Sources */,
 				B110F446277DEAE900FCB938 /* ShadowCardView.swift in Sources */,
+				9CC70A14277E1676004C4D60 /* LoginRegisterViewController.swift in Sources */,
 				B110F42D277DE9F000FCB938 /* SceneDelegate.swift in Sources */,
 				B110F442277DEADC00FCB938 /* CardView.swift in Sources */,
 			);
@@ -378,7 +398,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B110F422277DE9F000FCB938 /* Build configuration list for PBXProject "Bon-voyage" */ = {
+		B110F422277DE9F000FCB938 /* Build configuration list for PBXProject "bon-voyage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B110F439277DE9F100FCB938 /* Debug */,
