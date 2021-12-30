@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginRegisterViewController" customModule="Bon_voyage" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-ny-iFy" userLabel="Title Card View">
+                    <rect key="frame" x="107" y="84" width="200" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bon Voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTG-uZ-uPE">
+                            <rect key="frame" x="17" y="12.5" width="166.5" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="S1w-nb-0P1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="28"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="title_pink"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0y0-gf-aQM"/>
+                        <constraint firstItem="ZTG-uZ-uPE" firstAttribute="centerY" secondItem="XAJ-ny-iFy" secondAttribute="centerY" constant="4" id="5Ll-cq-YSK"/>
+                        <constraint firstItem="ZTG-uZ-uPE" firstAttribute="centerX" secondItem="XAJ-ny-iFy" secondAttribute="centerX" id="g8s-Iv-qqr"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ubf-vm-C5B"/>
+                        <constraint firstAttribute="width" constant="200" id="wnS-UQ-OUf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cES-eL-UXn" userLabel="Login Shadow Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                    <rect key="frame" x="24" y="166" width="378" height="177.5"/>
+                    <color key="backgroundColor" name="card_shadow"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-rr-oen" userLabel="Login Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                    <rect key="frame" x="12" y="154" width="378" height="177.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rPl-Pi-erw">
+                            <rect key="frame" x="12" y="12" width="354" height="153.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJc-6v-Vf3">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kz9-Sc-kYc">
+                                    <rect key="frame" x="0.0" y="26.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ik8-Y5-Eky">
+                                    <rect key="frame" x="0.0" y="72.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNj-3b-yuh" customClass="RoundedButton" customModule="Bon_voyage" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="118.5" width="354" height="35"/>
+                                    <color key="backgroundColor" name="btn_light_blue"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="pFX-em-xQS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Login">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="card_background_gray"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rPl-Pi-erw" secondAttribute="trailing" constant="12" id="PmZ-sC-LDL"/>
+                        <constraint firstAttribute="bottom" secondItem="rPl-Pi-erw" secondAttribute="bottom" constant="12" id="aZN-1P-0Af"/>
+                        <constraint firstItem="rPl-Pi-erw" firstAttribute="leading" secondItem="kgn-rr-oen" secondAttribute="leading" constant="12" id="cef-S1-j8l"/>
+                        <constraint firstItem="rPl-Pi-erw" firstAttribute="top" secondItem="kgn-rr-oen" secondAttribute="top" constant="12" id="mY5-sx-0hA"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RA-eo-hpg" userLabel="Register Shadow Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                    <rect key="frame" x="24" y="395.5" width="378" height="223.5"/>
+                    <color key="backgroundColor" name="card_shadow"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-mM-iS5" userLabel="Register Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                    <rect key="frame" x="12" y="383.5" width="378" height="223.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-vJ-LLI">
+                            <rect key="frame" x="12" y="12" width="354" height="199.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy4-OD-TgL">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ra-Hy-PwF">
+                                    <rect key="frame" x="0.0" y="26.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3du-5Q-Det">
+                                    <rect key="frame" x="0.0" y="72.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6mj-no-TJz">
+                                    <rect key="frame" x="0.0" y="118.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTB-Fo-Wx5" customClass="RoundedButton" customModule="Bon_voyage" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="164.5" width="354" height="35"/>
+                                    <color key="backgroundColor" name="btn_light_pink"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="FeO-wK-kPP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Register">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="card_background_gray"/>
+                    <constraints>
+                        <constraint firstItem="7UM-vJ-LLI" firstAttribute="top" secondItem="kW0-mM-iS5" secondAttribute="top" constant="12" id="4fv-qh-dfl"/>
+                        <constraint firstAttribute="bottom" secondItem="7UM-vJ-LLI" secondAttribute="bottom" constant="12" id="6WO-gf-QgI"/>
+                        <constraint firstAttribute="trailing" secondItem="7UM-vJ-LLI" secondAttribute="trailing" constant="12" id="GDr-3G-Kvl"/>
+                        <constraint firstItem="7UM-vJ-LLI" firstAttribute="leading" secondItem="kW0-mM-iS5" secondAttribute="leading" constant="12" id="QWc-14-dmL"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lSl-Sb-bi1">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="tintColor" name="bg_dark_blue"/>
+                    <color key="color" name="bg_dark_blue"/>
+                </activityIndicatorView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-beach-clear" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-kL-4ux">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="btn_light_pink"/>
+            <constraints>
+                <constraint firstItem="4RA-eo-hpg" firstAttribute="centerY" secondItem="kW0-mM-iS5" secondAttribute="centerY" constant="12" id="4Ii-CY-Pcd"/>
+                <constraint firstItem="ceH-kL-4ux" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4xL-oY-J0R"/>
+                <constraint firstItem="4RA-eo-hpg" firstAttribute="height" secondItem="kW0-mM-iS5" secondAttribute="height" id="5D1-zA-qVx"/>
+                <constraint firstItem="lSl-Sb-bi1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="CuR-Wy-2dE"/>
+                <constraint firstItem="4RA-eo-hpg" firstAttribute="width" secondItem="kW0-mM-iS5" secondAttribute="width" id="FZS-Qx-mNq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kgn-rr-oen" secondAttribute="trailing" constant="24" id="Mzv-gl-Yu0"/>
+                <constraint firstItem="XAJ-ny-iFy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P37-NU-Wgs"/>
+                <constraint firstItem="kW0-mM-iS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="RGP-vJ-rbI"/>
+                <constraint firstAttribute="bottom" secondItem="ceH-kL-4ux" secondAttribute="bottom" id="UMv-Ed-Yq3"/>
+                <constraint firstItem="lSl-Sb-bi1" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="UhI-it-Pvo"/>
+                <constraint firstItem="cES-eL-UXn" firstAttribute="height" secondItem="kgn-rr-oen" secondAttribute="height" id="Wu4-OE-vvA"/>
+                <constraint firstItem="cES-eL-UXn" firstAttribute="width" secondItem="kgn-rr-oen" secondAttribute="width" id="aH1-pG-OhO"/>
+                <constraint firstItem="kgn-rr-oen" firstAttribute="top" secondItem="XAJ-ny-iFy" secondAttribute="bottom" constant="20" id="bLm-yC-Xd4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kW0-mM-iS5" secondAttribute="trailing" constant="24" id="dkx-z1-uH1"/>
+                <constraint firstItem="kW0-mM-iS5" firstAttribute="top" secondItem="cES-eL-UXn" secondAttribute="bottom" constant="40" id="gUd-Lr-UH8"/>
+                <constraint firstItem="cES-eL-UXn" firstAttribute="centerX" secondItem="kgn-rr-oen" secondAttribute="centerX" constant="12" id="haw-tq-NCJ"/>
+                <constraint firstItem="ceH-kL-4ux" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hmY-8c-qDP"/>
+                <constraint firstItem="kgn-rr-oen" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="mRk-H0-KOI"/>
+                <constraint firstItem="XAJ-ny-iFy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="pi8-CD-rEa"/>
+                <constraint firstItem="ceH-kL-4ux" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qrZ-ZD-d3W"/>
+                <constraint firstItem="4RA-eo-hpg" firstAttribute="centerX" secondItem="kW0-mM-iS5" secondAttribute="centerX" constant="12" id="svd-HS-9yG"/>
+                <constraint firstItem="cES-eL-UXn" firstAttribute="centerY" secondItem="kgn-rr-oen" secondAttribute="centerY" constant="12" id="y8l-O6-i2F"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="25"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Thc-TC-2s7">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="1" y="-283"/>
+        </imageView>
+    </objects>
+    <designables>
+        <designable name="rNj-3b-yuh">
+            <size key="intrinsicContentSize" width="36" height="29"/>
+        </designable>
+        <designable name="rTB-Fo-Wx5">
+            <size key="intrinsicContentSize" width="54" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="background-beach-clear" width="414" height="896"/>
+        <namedColor name="bg_dark_blue">
+            <color red="0.32941176470588235" green="0.44705882352941179" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="btn_light_blue">
+            <color red="0.38039215686274508" green="0.65098039215686276" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="btn_light_pink">
+            <color red="0.8901960784313725" green="0.58823529411764708" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="card_background_gray">
+            <color red="0.87450980392156863" green="0.87450980392156863" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="card_shadow">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title_pink">
+            <color red="0.81960784313725488" green="0.52549019607843139" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
