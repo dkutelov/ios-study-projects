@@ -43,8 +43,13 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ubf-vm-C5B"/>
                         <constraint firstAttribute="width" constant="200" id="wnS-UQ-OUf"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cES-eL-UXn" userLabel="Login Shadow Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cES-eL-UXn" userLabel="Login Shadow Card View">
                     <rect key="frame" x="24" y="166" width="378" height="177.5"/>
                     <color key="backgroundColor" name="card_shadow"/>
                     <userDefinedRuntimeAttributes>
@@ -53,7 +58,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-rr-oen" userLabel="Login Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-rr-oen" userLabel="Login Card View">
                     <rect key="frame" x="12" y="154" width="378" height="177.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rPl-Pi-erw">
@@ -85,6 +90,11 @@
                                     <state key="normal" title="Login">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="loginButtonDidTapped:" destination="-1" eventType="touchUpInside" id="EsZ-Kn-MRR"/>
                                     </connections>
@@ -105,7 +115,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RA-eo-hpg" userLabel="Register Shadow Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RA-eo-hpg" userLabel="Register Shadow Card View">
                     <rect key="frame" x="24" y="395.5" width="378" height="223.5"/>
                     <color key="backgroundColor" name="card_shadow"/>
                     <userDefinedRuntimeAttributes>
@@ -114,7 +124,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-mM-iS5" userLabel="Register Card View" customClass="CardView" customModule="Bon_voyage" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-mM-iS5" userLabel="Register Card View">
                     <rect key="frame" x="12" y="383.5" width="378" height="223.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7UM-vJ-LLI">
@@ -151,6 +161,11 @@
                                     <state key="normal" title="Register">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="registerButtonDidTapped:" destination="-1" eventType="touchUpInside" id="fh3-Dv-2aH"/>
                                     </connections>

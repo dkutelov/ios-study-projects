@@ -11,6 +11,10 @@
 		9C4603A9277E413D005CD112 /* VacationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603A7277E413D005CD112 /* VacationTableViewCell.swift */; };
 		9C4603AA277E413D005CD112 /* VacationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4603A8277E413D005CD112 /* VacationTableViewCell.xib */; };
 		9C4603AD277F0751005CD112 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9C4603AC277F0751005CD112 /* SDWebImage */; };
+		9C4603B0277F58DE005CD112 /* Int+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603AF277F58DE005CD112 /* Int+ext.swift */; };
+		9C4603B3277F5E70005CD112 /* VacationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B2277F5E70005CD112 /* VacationDetailsViewController.swift */; };
+		9C4603B5277F6990005CD112 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B4277F6990005CD112 /* UIView+Ext.swift */; };
+		9C4603B7277F6A92005CD112 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B6277F6A92005CD112 /* UIButton+Ext.swift */; };
 		9CC70A14277E1676004C4D60 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */; };
 		9CC70A15277E1676004C4D60 /* LoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */; };
 		9CC70A17277E1FBC004C4D60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */; };
@@ -29,8 +33,12 @@
 		9C4603A4277E3B40005CD112 /* Vacation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Vacation.swift; path = "bon-voyage/Models/Vacation.swift"; sourceTree = SOURCE_ROOT; };
 		9C4603A7277E413D005CD112 /* VacationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VacationTableViewCell.swift; path = "bon-voyage/Cells/VacationTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		9C4603A8277E413D005CD112 /* VacationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VacationTableViewCell.xib; path = "bon-voyage/Cells/VacationTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
-		9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRegisterViewController.swift; path = "bon-voyage/LoginRegister/LoginRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
-		9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginRegisterViewController.xib; path = "bon-voyage/LoginRegister/LoginRegisterViewController.xib"; sourceTree = SOURCE_ROOT; };
+		9C4603AF277F58DE005CD112 /* Int+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Int+ext.swift"; path = "bon-voyage/Extensions/Int+ext.swift"; sourceTree = SOURCE_ROOT; };
+		9C4603B2277F5E70005CD112 /* VacationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VacationDetailsViewController.swift; path = "bon-voyage/Controllers/VacationDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9C4603B4277F6990005CD112 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Ext.swift"; path = "bon-voyage/Extensions/UIView+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		9C4603B6277F6A92005CD112 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+Ext.swift"; path = "bon-voyage/Extensions/UIButton+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRegisterViewController.swift; path = "Bon-voyage/Controllers/LoginRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginRegisterViewController.xib; path = "Bon-voyage/Views/LoginRegisterViewController.xib"; sourceTree = SOURCE_ROOT; };
 		9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "bon-voyage/Controllers/HomeViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B110F427277DE9F000FCB938 /* Bon-voyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bon-voyage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B110F42A277DE9F000FCB938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,13 +82,25 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		9CC70A11277E15C7004C4D60 /* LoginRegister */ = {
+		9C4603AE277F58CA005CD112 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */,
+				9C4603AF277F58DE005CD112 /* Int+ext.swift */,
+				9C4603B4277F6990005CD112 /* UIView+Ext.swift */,
+				9C4603B6277F6A92005CD112 /* UIButton+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C4603B1277F5E13005CD112 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B110F435277DE9F100FCB938 /* LaunchScreen.storyboard */,
+				B110F440277DEAC100FCB938 /* Custom Views */,
+				B110F430277DE9F000FCB938 /* Main.storyboard */,
 				9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */,
 			);
-			path = LoginRegister;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B110F41E277DE9F000FCB938 = {
@@ -102,16 +122,14 @@
 		B110F429277DE9F000FCB938 /* Bon-voyage */ = {
 			isa = PBXGroup;
 			children = (
+				9C4603AE277F58CA005CD112 /* Extensions */,
 				9C4603A6277E4113005CD112 /* Cells */,
-				9C4603A3277E3B20005CD112 /* Models */,
-				9CC70A11277E15C7004C4D60 /* LoginRegister */,
-				B110F440277DEAC100FCB938 /* Custom Views */,
 				B110F42A277DE9F000FCB938 /* AppDelegate.swift */,
 				B110F42C277DE9F000FCB938 /* SceneDelegate.swift */,
-				B110F430277DE9F000FCB938 /* Main.storyboard */,
 				B110F433277DE9F100FCB938 /* Assets.xcassets */,
+				9C4603A3277E3B20005CD112 /* Models */,
+				9C4603B1277F5E13005CD112 /* Views */,
 				B110F447277DEC0400FCB938 /* Controllers */,
-				B110F435277DE9F100FCB938 /* LaunchScreen.storyboard */,
 				B110F438277DE9F100FCB938 /* Info.plist */,
 				B110F43E277DEAB700FCB938 /* DemoData.swift */,
 			);
@@ -131,7 +149,9 @@
 		B110F447277DEC0400FCB938 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */,
 				9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */,
+				9C4603B2277F5E70005CD112 /* VacationDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4603B3277F5E70005CD112 /* VacationDetailsViewController.swift in Sources */,
 				9C4603A9277E413D005CD112 /* VacationTableViewCell.swift in Sources */,
 				B110F43F277DEAB700FCB938 /* DemoData.swift in Sources */,
 				B110F445277DEAE900FCB938 /* RoundedButton.swift in Sources */,
@@ -221,6 +242,9 @@
 				9CC70A17277E1FBC004C4D60 /* HomeViewController.swift in Sources */,
 				B110F42B277DE9F000FCB938 /* AppDelegate.swift in Sources */,
 				B110F446277DEAE900FCB938 /* ShadowCardView.swift in Sources */,
+				9C4603B0277F58DE005CD112 /* Int+ext.swift in Sources */,
+				9C4603B7277F6A92005CD112 /* UIButton+Ext.swift in Sources */,
+				9C4603B5277F6990005CD112 /* UIView+Ext.swift in Sources */,
 				9CC70A14277E1676004C4D60 /* LoginRegisterViewController.swift in Sources */,
 				B110F42D277DE9F000FCB938 /* SceneDelegate.swift in Sources */,
 				B110F442277DEADC00FCB938 /* CardView.swift in Sources */,

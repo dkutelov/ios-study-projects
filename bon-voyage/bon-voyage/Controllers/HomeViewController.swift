@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     var vacations = [Vacation]()
+    var selectedVacation: Vacation?
 
     // MARK: - Lifecycle
     
@@ -25,9 +26,15 @@ class HomeViewController: UIViewController {
         vacations = demoData
         setupTableView()
         
-//        let loginRegisterViewController = LoginRegisterViewController()
-//        loginRegisterViewController.modalPresentationStyle = .fullScreen
-//        present(loginRegisterViewController, animated: true)
+        let loginRegisterViewController = LoginRegisterViewController()
+        loginRegisterViewController.modalPresentationStyle = .fullScreen
+        present(loginRegisterViewController, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vacationDetailsViewController = segue.destination as? VacationDetailsViewController, let vacation = selectedVacation {
+            vacationDetailsViewController.vacation = vacation
+        }
     }
     
     // MARK: - Private Methods
@@ -94,4 +101,8 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedVacation = vacations[indexPath.row]
+        performSegue(withIdentifier: "VacationDetails", sender: self)
+    }
 }
