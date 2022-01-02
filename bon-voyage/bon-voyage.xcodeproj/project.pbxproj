@@ -17,6 +17,8 @@
 		9C4603B3277F5E70005CD112 /* VacationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B2277F5E70005CD112 /* VacationDetailsViewController.swift */; };
 		9C4603B5277F6990005CD112 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B4277F6990005CD112 /* UIView+Ext.swift */; };
 		9C4603B7277F6A92005CD112 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B6277F6A92005CD112 /* UIButton+Ext.swift */; };
+		9CBB8961278200A900DD263C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9CBB8960278200A900DD263C /* FirebaseAuth */; };
+		9CBB8963278200CD00DD263C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB8962278200CD00DD263C /* GoogleService-Info.plist */; };
 		9CC70A14277E1676004C4D60 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */; };
 		9CC70A15277E1676004C4D60 /* LoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */; };
 		9CC70A17277E1FBC004C4D60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */; };
@@ -42,6 +44,7 @@
 		9C4603B2277F5E70005CD112 /* VacationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VacationDetailsViewController.swift; path = "bon-voyage/Controllers/VacationDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		9C4603B4277F6990005CD112 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Ext.swift"; path = "bon-voyage/Extensions/UIView+Ext.swift"; sourceTree = SOURCE_ROOT; };
 		9C4603B6277F6A92005CD112 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+Ext.swift"; path = "bon-voyage/Extensions/UIButton+Ext.swift"; sourceTree = SOURCE_ROOT; };
+		9CBB8962278200CD00DD263C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9CC70A12277E1676004C4D60 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginRegisterViewController.swift; path = "Bon-voyage/Controllers/LoginRegisterViewController.swift"; sourceTree = SOURCE_ROOT; };
 		9CC70A13277E1676004C4D60 /* LoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginRegisterViewController.xib; path = "Bon-voyage/Views/LoginRegisterViewController.xib"; sourceTree = SOURCE_ROOT; };
 		9CC70A16277E1FBC004C4D60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "bon-voyage/Controllers/HomeViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -65,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4603AD277F0751005CD112 /* SDWebImage in Frameworks */,
+				9CBB8961278200A900DD263C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,7 @@
 				9C4603A3277E3B20005CD112 /* Models */,
 				9C4603B1277F5E13005CD112 /* Views */,
 				B110F447277DEC0400FCB938 /* Controllers */,
+				9CBB8962278200CD00DD263C /* GoogleService-Info.plist */,
 				B110F438277DE9F100FCB938 /* Info.plist */,
 				B110F43E277DEAB700FCB938 /* DemoData.swift */,
 				9C4119DF2781C5390023B2EC /* Constants.swift */,
@@ -183,6 +188,7 @@
 			name = "Bon-voyage";
 			packageProductDependencies = (
 				9C4603AC277F0751005CD112 /* SDWebImage */,
+				9CBB8960278200A900DD263C /* FirebaseAuth */,
 			);
 			productName = "Bon-voyage";
 			productReference = B110F427277DE9F000FCB938 /* Bon-voyage.app */;
@@ -213,6 +219,7 @@
 			mainGroup = B110F41E277DE9F000FCB938;
 			packageReferences = (
 				9C4603AB277F0751005CD112 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				9CBB895F278200A900DD263C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B110F428277DE9F000FCB938 /* Products */;
 			projectDirPath = "";
@@ -233,6 +240,7 @@
 				9CC70A15277E1676004C4D60 /* LoginRegisterViewController.xib in Resources */,
 				B110F434277DE9F100FCB938 /* Assets.xcassets in Resources */,
 				B110F432277DE9F000FCB938 /* Main.storyboard in Resources */,
+				9CBB8963278200CD00DD263C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +479,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		9CBB895F278200A900DD263C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -478,6 +494,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9C4603AB277F0751005CD112 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		9CBB8960278200A900DD263C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CBB895F278200A900DD263C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
