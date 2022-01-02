@@ -33,6 +33,12 @@ class VacationDetailsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let checkoutViewController = segue.destination as? CheckoutViewController {
+            checkoutViewController.vacation = vacation
+        }
+    }
 
     // MARK: - Private methods
     private func setupUI() {
@@ -53,7 +59,7 @@ class VacationDetailsViewController: UIViewController {
     private func setMainImage(withUrl imageUrl: String) {
         if let url = URL(string: imageUrl) {
             mainImageView.sd_imageIndicator = SDWebImageActivityIndicator.medium
-            mainImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "background-beach-alpha"))
+            mainImageView.sd_setImage(with: url, placeholderImage: UIImage(named: ImageName.placehoderImage))
         } else {
             mainImageView.image = nil
         }
@@ -69,7 +75,7 @@ extension VacationDetailsViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailCell", for: indexPath) as! ThumbnailCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellId.thumbnailCell, for: indexPath) as! ThumbnailCollectionViewCell
         let url = vacation.images[indexPath.row]
         cell.configureCell(url: url)
         return cell
@@ -81,7 +87,7 @@ extension VacationDetailsViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-      let tappedImageUrl = vacation.images[indexPath.row]
+        let tappedImageUrl = vacation.images[indexPath.item]
        setMainImage(withUrl: tappedImageUrl)
     }
 }

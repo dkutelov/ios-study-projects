@@ -23,5 +23,4 @@ class LoginRegisterViewController: UIViewController {
     @IBAction func registerButtonDidTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-
 }

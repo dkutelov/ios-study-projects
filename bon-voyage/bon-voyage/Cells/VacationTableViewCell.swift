@@ -33,17 +33,16 @@ class VacationTableViewCell: UITableViewCell {
         cardView.layer.borderWidth = 0.5
         cardView.layer.borderColor = UIColor(named: "border_blue")?.cgColor
     }
-
-
+    
+    
     func configureCell(vacation: Vacation) {
         titleLabel.text = vacation.title
         priceLabel.text = vacation.price.formatToCurrencyString()
         
         if let imageUrl = vacation.images.first,
-        let url = URL(string: imageUrl) {
+           let url = URL(string: imageUrl) {
             mainImage.sd_imageIndicator = SDWebImageActivityIndicator.medium //spinner when loading
-            mainImage.sd_setImage(with: url, placeholderImage: UIImage(named: "background-beach-alpha"))
+            mainImage.sd_setImage(with: url, placeholderImage: UIImage(named: ImageName.placehoderImage))
         }
     }
-    
 }

@@ -14,7 +14,7 @@ class ThumbnailCollectionViewCell: UICollectionViewCell {
     func configureCell(url: String) {
         if let url = URL(string: url) {
             thumbnailImage.sd_imageIndicator = SDWebImageActivityIndicator.medium
-            thumbnailImage.sd_setImage(with: url, placeholderImage: UIImage(named: "background-beach-alpha"))
+            thumbnailImage.sd_setImage(with: url, placeholderImage: UIImage(named: ImageName.placehoderImage))
         }
     }
 }

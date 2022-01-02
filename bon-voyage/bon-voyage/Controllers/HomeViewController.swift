@@ -26,9 +26,9 @@ class HomeViewController: UIViewController {
         vacations = demoData
         setupTableView()
         
-//        let loginRegisterViewController = LoginRegisterViewController()
-//        loginRegisterViewController.modalPresentationStyle = .fullScreen
-//        present(loginRegisterViewController, animated: true)
+        let loginRegisterViewController = LoginRegisterViewController()
+        loginRegisterViewController.modalPresentationStyle = .fullScreen
+        present(loginRegisterViewController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView() //gets rid of emtry cells at the end of the table
         tableView.contentInset.top = 8 // space above first cell
-        tableView.register(UINib(nibName: "VacationTableViewCell", bundle: nil), forCellReuseIdentifier: "VacationCell")
+        tableView.register(UINib(nibName: "VacationTableViewCell", bundle: nil), forCellReuseIdentifier: CellId.vacationCell)
     }
     
     
@@ -87,7 +87,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VacationCell", for: indexPath) as! VacationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellId.vacationCell, for: indexPath) as! VacationTableViewCell
         cell.configureCell(vacation: vacations[indexPath.row])
         return cell
     }
@@ -103,6 +103,6 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedVacation = vacations[indexPath.row]
-        performSegue(withIdentifier: "VacationDetails", sender: self)
+        performSegue(withIdentifier: SegueId.vacationDetails, sender: self)
     }
 }
