@@ -26,9 +26,9 @@ class HomeViewController: UIViewController {
         vacations = demoData
         setupTableView()
         
-        let loginRegisterViewController = LoginRegisterViewController()
-        loginRegisterViewController.modalPresentationStyle = .fullScreen
-        present(loginRegisterViewController, animated: true)
+//        let loginRegisterViewController = LoginRegisterViewController()
+//        loginRegisterViewController.modalPresentationStyle = .fullScreen
+//        present(loginRegisterViewController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
