@@ -1,9 +1,10 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const stripe = require("stripe");
 
 admin.initializeApp();
 
-//const db = admin.firestore()
+const db = admin.firestore();
 //const storage = admin.storage().bucket()
 const auth = admin.auth();
 
@@ -16,14 +17,16 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 
 // Delete User - on http request
 // Use from postman to delete registered test user
-exports.deleteUser = functions.https.onRequest((req, res) => {
+exports.deleteUser = functions.https.onRequest(async (req, res) => {
   const { email } = req.body;
 
+  const user = await auth.getUserByEmail(email).catch((error) => {
+    console.log(error);
+    res.status(500).send({ message: "Unable to find user!" });
+  });
+
   auth
-    .getUserByEmail(email)
-    .then(({ uid }) => {
-      return auth.deleteUser(uid);
-    })
+    .deleteUser(user.uid)
     .then(() => {
       res.status(200).send("User susccesfully deleted!");
     })
@@ -33,7 +36,7 @@ exports.deleteUser = functions.https.onRequest((req, res) => {
     });
 });
 
-// OnCreate
+// Vacation added - on create vacation in firestore
 exports.vacationAdded = functions.firestore
   .document("vacations/{vacationId}")
   .onCreate((snap) => {
@@ -49,7 +52,7 @@ exports.vacationAdded = functions.firestore
     return null;
   });
 
-// On Update
+// Vacation updated - on vacation update in firestore
 exports.vacationUpdated = functions.firestore
   .document("vacations/{vacationId}")
   .onUpdate((change) => {
@@ -69,7 +72,7 @@ exports.vacationUpdated = functions.firestore
     return null;
   });
 
-// On Delete
+// Vacation deleted - on vacation deleted
 exports.vacationDeleted = functions.firestore
   .document("vacations/{vacationId}")
   .onDelete((snap) => {
@@ -84,3 +87,37 @@ exports.vacationDeleted = functions.firestore
 
     return null;
   });
+
+// Create Stripe User object on Firebase auth register user
+exports.createStripeUser = functions.https.onCall(async (data, context) => {
+  // data - we pass to the function
+  const email = data.email;
+
+  //context - who is making the call
+  const uid = context.auth.uid;
+
+  if (uid === null) {
+    console.log("Illegal access attempt due to unauthenticated attempt.");
+    throw new functions.https.HttpsError("internal", "Illegal access attempt");
+  }
+
+  return stripe.customers
+    .create({ email: email })
+    .then((customer) => {
+      return customer["id"];
+    })
+    .then((customerId) => {
+      admin.firestore().collection("users").doc(uid).set({
+        stripeId: customerId,
+        email: email,
+        id: uid
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      throw new functions.https.HttpsError(
+        "internal",
+        " Unable to create Stripe user : " + err
+      );
+    });
+});

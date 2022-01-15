@@ -17,7 +17,6 @@
 		9C4603B3277F5E70005CD112 /* VacationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B2277F5E70005CD112 /* VacationDetailsViewController.swift */; };
 		9C4603B5277F6990005CD112 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B4277F6990005CD112 /* UIView+Ext.swift */; };
 		9C4603B7277F6A92005CD112 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4603B6277F6A92005CD112 /* UIButton+Ext.swift */; };
-		9CBB8961278200A900DD263C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9CBB8960278200A900DD263C /* FirebaseAuth */; };
 		9CBB8963278200CD00DD263C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB8962278200CD00DD263C /* GoogleService-Info.plist */; };
 		9CBB8965278203CB00DD263C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB8964278203CB00DD263C /* User.swift */; };
 		9CBB89682782047800DD263C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB89672782047800DD263C /* UserManager.swift */; };
@@ -27,6 +26,12 @@
 		9CC914C42792C7D400750199 /* RegisterLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC914C22792C7D400750199 /* RegisterLoginViewController.xib */; };
 		9CC914C627930A7100750199 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC914C527930A7100750199 /* ViewController+Ext.swift */; };
 		9CEA159D2781955E00ABE039 /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA159C2781955E00ABE039 /* ThumbnailCollectionViewCell.swift */; };
+		9CFF6020279339080049829A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFF601F279339080049829A /* FirebaseAuth */; };
+		9CFF6022279339080049829A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFF6021279339080049829A /* FirebaseFirestore */; };
+		9CFF6024279339080049829A /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFF6023279339080049829A /* FirebaseFunctions */; };
+		9CFF602727933BD90049829A /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFF602627933BD90049829A /* Stripe */; };
+		9CFF602927933BD90049829A /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFF602827933BD90049829A /* StripeCardScan */; };
+		9CFF602B27933BD90049829A /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 9CFF602A27933BD90049829A /* StripeIdentity */; };
 		B110F42B277DE9F000FCB938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F42A277DE9F000FCB938 /* AppDelegate.swift */; };
 		B110F42D277DE9F000FCB938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B110F42C277DE9F000FCB938 /* SceneDelegate.swift */; };
 		B110F432277DE9F000FCB938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B110F430277DE9F000FCB938 /* Main.storyboard */; };
@@ -74,9 +79,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFF602927933BD90049829A /* StripeCardScan in Frameworks */,
 				9C4603AD277F0751005CD112 /* SDWebImage in Frameworks */,
+				9CFF6022279339080049829A /* FirebaseFirestore in Frameworks */,
+				9CFF6024279339080049829A /* FirebaseFunctions in Frameworks */,
+				9CFF6020279339080049829A /* FirebaseAuth in Frameworks */,
 				9CBB896B27820C2100DD263C /* JGProgressHUD in Frameworks */,
-				9CBB8961278200A900DD263C /* FirebaseAuth in Frameworks */,
+				9CFF602727933BD90049829A /* Stripe in Frameworks */,
+				9CFF602B27933BD90049829A /* StripeIdentity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +225,13 @@
 			name = "Bon-voyage";
 			packageProductDependencies = (
 				9C4603AC277F0751005CD112 /* SDWebImage */,
-				9CBB8960278200A900DD263C /* FirebaseAuth */,
 				9CBB896A27820C2100DD263C /* JGProgressHUD */,
+				9CFF601F279339080049829A /* FirebaseAuth */,
+				9CFF6021279339080049829A /* FirebaseFirestore */,
+				9CFF6023279339080049829A /* FirebaseFunctions */,
+				9CFF602627933BD90049829A /* Stripe */,
+				9CFF602827933BD90049829A /* StripeCardScan */,
+				9CFF602A27933BD90049829A /* StripeIdentity */,
 			);
 			productName = "Bon-voyage";
 			productReference = B110F427277DE9F000FCB938 /* Bon-voyage.app */;
@@ -247,8 +262,9 @@
 			mainGroup = B110F41E277DE9F000FCB938;
 			packageReferences = (
 				9C4603AB277F0751005CD112 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				9CBB895F278200A900DD263C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9CBB896927820C2100DD263C /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				9CFF601E279339070049829A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9CFF602527933BD90049829A /* XCRemoteSwiftPackageReference "stripe-ios" */,
 			);
 			productRefGroup = B110F428277DE9F000FCB938 /* Products */;
 			projectDirPath = "";
@@ -511,7 +527,15 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		9CBB895F278200A900DD263C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		9CBB896927820C2100DD263C /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		9CFF601E279339070049829A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -519,12 +543,12 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		9CBB896927820C2100DD263C /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+		9CFF602527933BD90049829A /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			repositoryURL = "https://github.com/stripe/stripe-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 21.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -535,15 +559,40 @@
 			package = 9C4603AB277F0751005CD112 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		9CBB8960278200A900DD263C /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9CBB895F278200A900DD263C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
 		9CBB896A27820C2100DD263C /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9CBB896927820C2100DD263C /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
 			productName = JGProgressHUD;
+		};
+		9CFF601F279339080049829A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFF601E279339070049829A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9CFF6021279339080049829A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFF601E279339070049829A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9CFF6023279339080049829A /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFF601E279339070049829A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		9CFF602627933BD90049829A /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFF602527933BD90049829A /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+		9CFF602827933BD90049829A /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFF602527933BD90049829A /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeCardScan;
+		};
+		9CFF602A27933BD90049829A /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CFF602527933BD90049829A /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeIdentity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

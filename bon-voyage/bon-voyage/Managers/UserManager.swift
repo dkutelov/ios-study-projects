@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFunctions
 
 class UserManager {
     static let shared = UserManager()
@@ -29,8 +30,15 @@ class UserManager {
                 return
             }
             
-            print(authResult!)
-            completion(nil)
+            Functions.functions().httpsCallable("createStripeUser").call(["email": email]) { (result, error) in
+                // pass data as dictionary
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    return
+                }
+                
+                completion(nil)
+            }
         }
     }
     
