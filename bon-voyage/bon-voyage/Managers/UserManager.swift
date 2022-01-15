@@ -10,14 +10,19 @@ import Firebase
 
 class UserManager {
     static let shared = UserManager()
+    let auth = Auth.auth()
     
     private init() {}
     
+    public var isSignedIn: Bool {
+        return auth.currentUser != nil
+    }
+       
     func registerUser(email: String,
                       password: String,
                       completion: @escaping (_ error: Error?) -> Void) {
         
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+        auth.createUser(withEmail: email, password: password) { authResult, error in
             
             guard error == nil else {
                 completion(error)
@@ -33,7 +38,7 @@ class UserManager {
                password: String,
                completion: @escaping (_ error: Error?) -> Void) {
         
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+        auth.signIn(withEmail: email, password: password) { authResult, error in
             
             guard error == nil else {
                 completion(error)
@@ -46,7 +51,7 @@ class UserManager {
     
     func logoutUser() {
         do {
-            try Auth.auth().signOut()
+            try auth.signOut()
         } catch {
             debugPrint(error.localizedDescription)
         }
