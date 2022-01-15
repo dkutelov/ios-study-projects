@@ -30,15 +30,16 @@ class UserManager {
                 return
             }
             
-            Functions.functions().httpsCallable("createStripeUser").call(["email": email]) { (result, error) in
-                // pass data as dictionary
-                if let error = error {
-                    debugPrint(error.localizedDescription)
-                    return
-                }
-                
-                completion(nil)
-            }
+//            Functions.functions().httpsCallable("createStripeUser").call(["email": email]) { (result, error) in
+//                // pass data as dictionary
+//                if let error = error {
+//                    debugPrint(error.localizedDescription)
+//                    return
+//                }
+//                
+//                completion(nil)
+//            }
+            completion(nil)
         }
     }
     

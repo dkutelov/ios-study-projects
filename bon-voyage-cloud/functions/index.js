@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
-const stripe = require("stripe");
+const stripe = require("stripe")(functions.config().stripe.secret);
 
 admin.initializeApp();
 
@@ -89,6 +89,7 @@ exports.vacationDeleted = functions.firestore
   });
 
 // Create Stripe User object on Firebase auth register user
+// Function to be called from the app, alternative to createStripeUserObject
 exports.createStripeUser = functions.https.onCall(async (data, context) => {
   // data - we pass to the function
   const email = data.email;
@@ -121,3 +122,58 @@ exports.createStripeUser = functions.https.onCall(async (data, context) => {
       );
     });
 });
+
+exports.createStripeUserObject = functions.auth
+  .user()
+  .onCreate(({ uid, email, photoURL }) => {
+    if (!uid || !email) {
+      console.log("Illegal access attempt due to unauthenticated attempt.");
+      throw new functions.https.HttpsError(
+        "internal",
+        "Illegal access attempt"
+      );
+    }
+
+    photoURL =
+      photoURL ||
+      "https://icon-library.com/images/icon-avatar/icon-avatar-0.jpg";
+
+    return stripe.customers
+      .create({ email: email })
+      .then(({ id }) => {
+        admin.firestore().collection("users").doc(uid).set({
+          stripeId: id,
+          email: email,
+          id: uid,
+          photoURL
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        throw new functions.https.HttpsError(
+          "internal",
+          " Unable to create Stripe user : " + err
+        );
+      });
+  });
+
+// const user = {
+//   phoneNumber: null,
+//   email: "dari@test.com",
+//   photoURL: null,
+//   uid: "QDTAzlhMUyNfMrhosEbnmo0sdno1",
+//   passwordSalt: null,
+//   emailVerified: false,
+//   disabled: false,
+//   metadata: {
+//     lastSignInTime: "2022-01-15T19:34:43Z",
+//     creationTime: "2022-01-15T19:34:43Z"
+//   },
+//   customClaims: {},
+//   providerData: [
+//     { providerId: "password", uid: "dari@test.com", email: "dari@test.com" }
+//   ],
+//   passwordHash: null,
+//   tokensValidAfterTime: null,
+//   displayName: null
+// };
