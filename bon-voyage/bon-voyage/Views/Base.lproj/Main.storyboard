@@ -306,11 +306,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Cnv-CD-9CP"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Book It">
-                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Book It">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="5"/>
@@ -529,7 +529,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Ending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC1-M8-06G">
-                                                        <rect key="frame" x="6" y="89.5" width="167" height="16"/>
+                                                        <rect key="frame" x="52.5" y="89.5" width="74.5" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -537,9 +537,9 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="QC1-M8-06G" secondAttribute="bottom" constant="12" id="0ck-nc-WTP"/>
-                                                    <constraint firstItem="QC1-M8-06G" firstAttribute="leading" secondItem="tj3-Xc-Yno" secondAttribute="leading" constant="6" id="CeA-jQ-zZF"/>
+                                                    <constraint firstItem="QC1-M8-06G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tj3-Xc-Yno" secondAttribute="leading" id="CeA-jQ-zZF"/>
                                                     <constraint firstItem="zbH-M6-aRi" firstAttribute="top" secondItem="tj3-Xc-Yno" secondAttribute="top" constant="12" id="L5E-cv-5I9"/>
-                                                    <constraint firstAttribute="trailing" secondItem="QC1-M8-06G" secondAttribute="trailing" constant="6" id="hJJ-pD-LWQ"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QC1-M8-06G" secondAttribute="trailing" id="hJJ-pD-LWQ"/>
                                                     <constraint firstItem="zbH-M6-aRi" firstAttribute="centerX" secondItem="tj3-Xc-Yno" secondAttribute="centerX" id="mqy-Zd-6P6"/>
                                                     <constraint firstItem="QC1-M8-06G" firstAttribute="centerX" secondItem="tj3-Xc-Yno" secondAttribute="centerX" id="sPJ-ha-KhB"/>
                                                 </constraints>
@@ -553,7 +553,7 @@
                                                 <rect key="frame" x="187" y="0.0" width="179" height="117.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank Ending In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPv-Ya-db6">
-                                                        <rect key="frame" x="6" y="89.5" width="167" height="16"/>
+                                                        <rect key="frame" x="44.5" y="89.5" width="90" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -570,8 +570,8 @@
                                                 <constraints>
                                                     <constraint firstItem="IPv-Ya-db6" firstAttribute="centerX" secondItem="xFM-m6-Ea0" secondAttribute="centerX" id="2Sj-Eh-got"/>
                                                     <constraint firstItem="OYE-o6-Ag3" firstAttribute="top" secondItem="xFM-m6-Ea0" secondAttribute="top" constant="12" id="8kG-sE-3lH"/>
-                                                    <constraint firstItem="IPv-Ya-db6" firstAttribute="leading" secondItem="xFM-m6-Ea0" secondAttribute="leading" constant="6" id="9ji-Zq-Yx7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="IPv-Ya-db6" secondAttribute="trailing" constant="6" id="inC-et-ClY"/>
+                                                    <constraint firstItem="IPv-Ya-db6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xFM-m6-Ea0" secondAttribute="leading" id="9ji-Zq-Yx7"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IPv-Ya-db6" secondAttribute="trailing" id="inC-et-ClY"/>
                                                     <constraint firstAttribute="bottom" secondItem="IPv-Ya-db6" secondAttribute="bottom" constant="12" id="nGK-CW-215"/>
                                                     <constraint firstItem="OYE-o6-Ag3" firstAttribute="centerX" secondItem="xFM-m6-Ea0" secondAttribute="centerX" id="ngq-WQ-obl"/>
                                                 </constraints>
@@ -588,6 +588,7 @@
                                 <constraints>
                                     <constraint firstItem="BgI-KE-AKt" firstAttribute="top" secondItem="v2e-2k-y51" secondAttribute="top" constant="12" id="2h3-Kb-BT1"/>
                                     <constraint firstAttribute="bottom" secondItem="OJ1-IK-Mzi" secondAttribute="bottom" constant="12" id="Eej-tA-pYu"/>
+                                    <constraint firstItem="Qb9-PA-tCC" firstAttribute="leading" secondItem="BgI-KE-AKt" secondAttribute="trailing" constant="115" id="GcV-f0-yfq"/>
                                     <constraint firstItem="Qb9-PA-tCC" firstAttribute="top" secondItem="v2e-2k-y51" secondAttribute="top" constant="10" id="GzB-FM-OZn"/>
                                     <constraint firstAttribute="trailing" secondItem="OJ1-IK-Mzi" secondAttribute="trailing" constant="12" id="HaQ-bo-QFN"/>
                                     <constraint firstItem="OJ1-IK-Mzi" firstAttribute="top" secondItem="Qb9-PA-tCC" secondAttribute="bottom" constant="12" id="TAC-Nu-Qqc"/>
@@ -618,7 +619,7 @@
                                 <rect key="frame" x="12" y="414.5" width="390" height="128.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbF-g2-5C5">
-                                        <rect key="frame" x="12" y="12" width="129" height="20.5"/>
+                                        <rect key="frame" x="12" y="12" width="366" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -652,6 +653,7 @@
                                     <constraint firstAttribute="trailing" secondItem="v0K-1F-K6O" secondAttribute="trailing" constant="12" id="30e-FK-ttK"/>
                                     <constraint firstItem="v0K-1F-K6O" firstAttribute="top" secondItem="nbF-g2-5C5" secondAttribute="bottom" constant="12" id="BxW-j1-Fhy"/>
                                     <constraint firstItem="nbF-g2-5C5" firstAttribute="leading" secondItem="BfP-uW-8I4" secondAttribute="leading" constant="12" id="JyW-Dr-Gbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="nbF-g2-5C5" secondAttribute="trailing" constant="12" id="P5I-p5-kfB"/>
                                     <constraint firstItem="nbF-g2-5C5" firstAttribute="top" secondItem="BfP-uW-8I4" secondAttribute="top" constant="12" id="Xdx-cd-ZkF"/>
                                     <constraint firstItem="v0K-1F-K6O" firstAttribute="leading" secondItem="BfP-uW-8I4" secondAttribute="leading" constant="12" id="dkd-Kt-SFn"/>
                                     <constraint firstAttribute="bottom" secondItem="v0K-1F-K6O" secondAttribute="bottom" constant="12" id="rSo-QM-waN"/>
@@ -680,11 +682,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Uqm-kH-R8X"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Checkout">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Checkout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-FE-syB">
                                 <rect key="frame" x="370" y="812.5" width="20" height="20"/>

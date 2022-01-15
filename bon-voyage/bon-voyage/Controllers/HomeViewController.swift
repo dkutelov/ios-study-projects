@@ -26,9 +26,9 @@ class HomeViewController: UIViewController {
         vacations = demoData
         setupTableView()
         
-        let loginRegisterViewController = LoginRegisterViewController()
-        loginRegisterViewController.modalPresentationStyle = .fullScreen
-        present(loginRegisterViewController, animated: true)
+        let registerLoginViewController = RegisterLoginViewController()
+        registerLoginViewController.modalPresentationStyle = .fullScreen
+        present(registerLoginViewController, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,9 +54,9 @@ class HomeViewController: UIViewController {
         let userSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let logout = UIAlertAction(title: "Logout", style: .default) { action in
-            let loginRegisterViewController = LoginRegisterViewController()
-            loginRegisterViewController.modalPresentationStyle = .fullScreen
-            self.present(loginRegisterViewController, animated: true)
+            let registerLoginViewController = RegisterLoginViewController()
+            registerLoginViewController.modalPresentationStyle = .fullScreen
+            self.present(registerLoginViewController, animated: true)
         }
         
         let manageCards = UIAlertAction(title: "Manage Credit Cards", style: .default) { action in

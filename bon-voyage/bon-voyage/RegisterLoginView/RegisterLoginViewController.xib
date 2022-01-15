@@ -9,8 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginRegisterViewController" customModule="Bon_voyage" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterLoginViewController" customModule="Bon_voyage" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="lSl-Sb-bi1" id="Kqz-39-Mi8"/>
+                <outlet property="loginEmailTextField" destination="kz9-Sc-kYc" id="XiJ-5x-BAF"/>
+                <outlet property="loginPasswordTextField" destination="Ik8-Y5-Eky" id="9zy-OG-SfJ"/>
+                <outlet property="registerConfirmPasswordTextField" destination="6mj-no-TJz" id="8IM-ts-3ki"/>
+                <outlet property="registerEmailTextField" destination="9ra-Hy-PwF" id="CQL-kW-fc5"/>
+                <outlet property="registerPasswordTextField" destination="3du-5Q-Det" id="y2m-4m-641"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -96,7 +102,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="loginButtonDidTapped:" destination="-1" eventType="touchUpInside" id="EsZ-Kn-MRR"/>
+                                        <action selector="loginButtonDidTapped:" destination="-1" eventType="touchUpInside" id="e5b-xS-Af4"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -167,7 +173,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="registerButtonDidTapped:" destination="-1" eventType="touchUpInside" id="fh3-Dv-2aH"/>
+                                        <action selector="registerButtonDidTapped:" destination="-1" eventType="touchUpInside" id="Fh1-79-MIN"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -225,11 +231,6 @@
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
-        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Thc-TC-2s7">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="1" y="-283"/>
-        </imageView>
     </objects>
     <resources>
         <image name="background-beach-clear" width="414" height="896"/>
