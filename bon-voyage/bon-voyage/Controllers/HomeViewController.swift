@@ -55,6 +55,7 @@ class HomeViewController: UIViewController {
         let userSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let logout = UIAlertAction(title: "Logout", style: .default) { action in
+            UserManager.shared.logoutUser()
             let registerLoginViewController = RegisterLoginViewController()
             registerLoginViewController.modalPresentationStyle = .fullScreen
             self.present(registerLoginViewController, animated: true)

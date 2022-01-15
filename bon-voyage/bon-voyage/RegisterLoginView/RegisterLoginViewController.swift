@@ -30,7 +30,33 @@ class RegisterLoginViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func loginButtonDidTapped(_ sender: RoundedButton) {
-        dismiss(animated: true, completion: nil)
+        // Validation
+        guard let email = loginEmailTextField.text,
+              !email.isEmpty,
+              let password = loginPasswordTextField.text,
+              !password.isEmpty else {
+                  simpleSelfClosingAlert(message: "All fields are required", duration: 2.0)
+                  return
+              }
+        
+        activityIndicator.startAnimating()
+        
+        DispatchQueue.main.async {
+            UserManager.shared.loginUser(email: email, password: password) { error in
+                
+                defer { // defer - code will be executed in all cases when the function is exited
+                    self.activityIndicator.stopAnimating()
+                }
+                
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    self.simpleSelfClosingAlert(message: "\(error.localizedDescription)", duration: 2.0)
+                    return
+                }
+                
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 
     @IBAction func registerButtonDidTapped(_ sender: Any) {
@@ -42,12 +68,12 @@ class RegisterLoginViewController: UIViewController {
               !password.isEmpty,
               let confirmPassword = registerConfirmPasswordTextField.text,
               !confirmPassword.isEmpty else {
-                  showNotification(message: "Fields are required!", time: 1.0)
+                  simpleSelfClosingAlert(message: "All fields are required", duration: 2.0)
                   return
               }
         
         if password != confirmPassword {
-            showNotification(message: "Password shoud match!", time: 1.0)
+            simpleSelfClosingAlert(message: "Passwords shound match", duration: 2.0)
             return
         }
         
@@ -62,22 +88,12 @@ class RegisterLoginViewController: UIViewController {
                 
                 if let error = error {
                     debugPrint(error.localizedDescription)
-                    self.showNotification(message: "\(error.localizedDescription)", time: 3.0)
+                    self.simpleSelfClosingAlert(message: "\(error.localizedDescription)", duration: 2.0)
                     return
                 }
                 
                 self.dismiss(animated: true, completion: nil)
             }
         }
-    }
-    
-    // MARK: - Private methods
-    
-    func showNotification(message text: String, time delay: Double) {
-        let hud = JGProgressHUD()
-        hud.textLabel.text = "\(text)"
-        //hud.indicatorView = JGProgressHUDIndicatorView()
-        hud.show(in: self.view)
-        hud.dismiss(afterDelay: delay)
     }
 }

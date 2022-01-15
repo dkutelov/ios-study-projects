@@ -28,4 +28,27 @@ class UserManager {
             completion(nil)
         }
     }
+    
+    func loginUser(email: String,
+               password: String,
+               completion: @escaping (_ error: Error?) -> Void) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            
+            guard error == nil else {
+                completion(error)
+                return
+            }
+            
+            completion(nil)
+        }
+    }
+    
+    func logoutUser() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            debugPrint(error.localizedDescription)
+        }
+    }
 }
