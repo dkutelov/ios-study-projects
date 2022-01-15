@@ -32,7 +32,8 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vacationDetailsViewController = segue.destination as? VacationDetailsViewController, let vacation = selectedVacation {
+        if let vacationDetailsViewController = segue.destination as? VacationDetailsViewController,
+            let vacation = selectedVacation {
             vacationDetailsViewController.vacation = vacation
         }
     }

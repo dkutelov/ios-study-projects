@@ -42,13 +42,12 @@ class RegisterLoginViewController: UIViewController {
               !password.isEmpty,
               let confirmPassword = registerConfirmPasswordTextField.text,
               !confirmPassword.isEmpty else {
-                  
-                  // present alert
+                  showNotification(message: "Fields are required!", time: 1.0)
                   return
               }
         
         if password != confirmPassword {
-            // present alert
+            showNotification(message: "Password shoud match!", time: 1.0)
             return
         }
         
@@ -56,21 +55,29 @@ class RegisterLoginViewController: UIViewController {
         
         DispatchQueue.main.async {
             UserManager.shared.registerUser(email: email, password: password) { error in
-                self.activityIndicator.stopAnimating()
+                
+                defer { // defer - code will be executed in all cases when the function is exited
+                    self.activityIndicator.stopAnimating()
+                }
                 
                 if let error = error {
                     debugPrint(error.localizedDescription)
-                    let hud = JGProgressHUD()
-                    hud.textLabel.text = "\(error.localizedDescription)"
-                    hud.indicatorView = JGProgressHUDIndicatorView()
-                    hud.show(in: self.view)
-                    hud.dismiss(afterDelay: 3.0)
-                    
+                    self.showNotification(message: "\(error.localizedDescription)", time: 3.0)
                     return
                 }
                 
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    // MARK: - Private methods
+    
+    func showNotification(message text: String, time delay: Double) {
+        let hud = JGProgressHUD()
+        hud.textLabel.text = "\(text)"
+        //hud.indicatorView = JGProgressHUDIndicatorView()
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: delay)
     }
 }
