@@ -31,7 +31,6 @@ class HomeViewController: UIViewController {
             registerLoginViewController.modalPresentationStyle = .fullScreen
             present(registerLoginViewController, animated: true)
         }
-     
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -154,6 +154,21 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate {
                   presentError()
                   return
               }
+        
+        let data = profilePictureImageView.image?.pngData()
+        //Sign Up with authManager
+        AuthManager.shared.signUp(
+            email: email,
+            username: username,
+            password: password,
+            profilePicture: data) { result in
+                switch result {
+                case .success(let user):
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
     
     @objc func didTapTerms() {
