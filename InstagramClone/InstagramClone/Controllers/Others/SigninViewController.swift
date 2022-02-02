@@ -133,9 +133,13 @@ class SigninViewController: UIViewController {
     
     @objc func didTapCreateAccount() {
         let signupViewController = SignupViewController()
-//        signupViewController.completion = {
-//
-//        }
+        signupViewController.completion = { [weak self] in
+            DispatchQueue.main.async {
+                let tabViewController = TabBarViewController()
+                tabViewController.modalPresentationStyle = .fullScreen
+                self?.present(tabViewController, animated: true)
+            }
+        }
         navigationController?.pushViewController(signupViewController, animated: true)
     }
     

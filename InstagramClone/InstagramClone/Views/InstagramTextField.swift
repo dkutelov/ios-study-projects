@@ -17,6 +17,7 @@ class InstagramTextField: UITextField {
         layer.borderWidth = 1
         layer.borderColor = UIColor.secondaryLabel.cgColor
         backgroundColor = .secondarySystemBackground //changes in light / dark mode
+        autocapitalizationType = .none
     }
     
     required init?(coder: NSCoder) {

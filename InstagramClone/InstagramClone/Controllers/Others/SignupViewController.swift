@@ -71,6 +71,10 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate {
         return button
     }()
     
+    // MARK: - Properties
+    public var completion: (() -> Void)?
+    
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -161,12 +165,18 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate {
             email: email,
             username: username,
             password: password,
-            profilePicture: data) { result in
-                switch result {
-                case .success(let user):
-                    break
-                case .failure(let error):
-                    print(error)
+            profilePicture: data) { [weak self] result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let user):
+                        UserDefaults.standard.setValue(user.email, forKey: "email")
+                        UserDefaults.standard.setValue(user.username, forKey: "username")
+                        
+                        self?.navigationController?.popToRootViewController(animated: true)
+                        self?.completion?()
+                    case .failure(let error):
+                        print("\n\n Sign Up Error: \(error)")
+                    }
                 }
             }
     }

@@ -19,9 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         if AuthManager.shared.isSignedIn {
-            
             window.rootViewController = TabBarViewController()
-        
+            
         } else {
             let viewController = SigninViewController()
             
