@@ -8,6 +8,7 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
+
     var homeViewController: UIViewController?
     var exploreViewController: UIViewController?
     var cameraViewController: UIViewController?
@@ -41,6 +42,7 @@ class TabBarViewController: UITabBarController {
         activityViewController = UINavigationController(rootViewController: activity)
         profileViewController = UINavigationController(rootViewController: profile)
         
+        
         if let homeViewController = homeViewController,
             let exploreViewController = exploreViewController,
             let cameraViewController = cameraViewController,
@@ -63,20 +65,25 @@ class TabBarViewController: UITabBarController {
                                 _ activityViewController: UIViewController,
                                 _ profileViewController: UIViewController) {
         
-        homeViewController.tabBarItem = UITabBarItem(title: "Home",
-                                    image: UIImage(systemName: "house"),
-                                    tag: 1)
-        exploreViewController.tabBarItem = UITabBarItem(title: "Explore",
-                                    image: UIImage(systemName: "safari"),
-                                    tag: 2)
-        cameraViewController.tabBarItem = UITabBarItem(title: "Camera",
-                                    image: UIImage(systemName: "camera"),
-                                    tag: 3)
-        activityViewController.tabBarItem = UITabBarItem(title: "Notifications",
-                                    image: UIImage(systemName: "bell"),
-                                    tag: 4)
-        profileViewController.tabBarItem = UITabBarItem(title: "Profile",
-                                    image: UIImage(systemName: "person.circle"),
-                                    tag: 5)
+        homeViewController.tabBarItem = UITabBarItem(
+            title: "Home",
+            image: UIImage(systemName: "house"),
+            tag: 1)
+        exploreViewController.tabBarItem = UITabBarItem(
+            title: "Explore",
+            image: UIImage(systemName: "safari"),
+            tag: 2)
+        cameraViewController.tabBarItem = UITabBarItem(
+            title: "Camera",
+            image: UIImage(systemName: "camera"),
+            tag: 3)
+        activityViewController.tabBarItem = UITabBarItem(
+            title: "Notifications",
+            image: UIImage(systemName: "bell"),
+            tag: 4)
+        profileViewController.tabBarItem = UITabBarItem(
+            title: "Profile",
+            image: UIImage(systemName: "person.circle"),
+            tag: 5)
     }
 }
