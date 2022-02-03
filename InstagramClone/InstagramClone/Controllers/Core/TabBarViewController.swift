@@ -20,11 +20,20 @@ class TabBarViewController: UITabBarController {
     }
     
     private func updateTabBar() {
+        guard let email = UserDefaults.standard.string(forKey: "email"),
+              let username = UserDefaults.standard.string(forKey: "username")
+        else { return }
+        
+        let currentUser = User(
+            username: username,
+            email: email
+        )
+        
         let home = HomeViewController()
         let explore = ExploreViewController()
         let camera = CameraViewController()
         let activity = NotificationsViewController()
-        let profile = ProfileViewController()
+        let profile = ProfileViewController(user: currentUser)
         
         homeViewController = UINavigationController(rootViewController: home)
         exploreViewController = UINavigationController(rootViewController: explore)
