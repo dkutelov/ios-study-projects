@@ -16,6 +16,7 @@
 		9C3B881227B8147200F36A35 /* SafeAreaLabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881127B8147200F36A35 /* SafeAreaLabViewController.swift */; };
 		9C3B881427B81CB800F36A35 /* MarginGuidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881327B81CB800F36A35 /* MarginGuidesViewController.swift */; };
 		9C3B881627B81F5F00F36A35 /* LayoutMarginsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881527B81F5F00F36A35 /* LayoutMarginsViewController.swift */; };
+		9C3B881827B8FD6000F36A35 /* ReadableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881727B8FD6000F36A35 /* ReadableContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9C3B881127B8147200F36A35 /* SafeAreaLabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLabViewController.swift; sourceTree = "<group>"; };
 		9C3B881327B81CB800F36A35 /* MarginGuidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginGuidesViewController.swift; sourceTree = "<group>"; };
 		9C3B881527B81F5F00F36A35 /* LayoutMarginsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutMarginsViewController.swift; sourceTree = "<group>"; };
+		9C3B881727B8FD6000F36A35 /* ReadableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				9C3B880027B807E900F36A35 /* ViewController.swift */,
 				9C3B881127B8147200F36A35 /* SafeAreaLabViewController.swift */,
 				9C3B881327B81CB800F36A35 /* MarginGuidesViewController.swift */,
+				9C3B881727B8FD6000F36A35 /* ReadableContentViewController.swift */,
 				9C3B881527B81F5F00F36A35 /* LayoutMarginsViewController.swift */,
 			);
 			path = Controllers;
@@ -157,6 +160,7 @@
 			files = (
 				9C3B881227B8147200F36A35 /* SafeAreaLabViewController.swift in Sources */,
 				9C3B880127B807E900F36A35 /* ViewController.swift in Sources */,
+				9C3B881827B8FD6000F36A35 /* ReadableContentViewController.swift in Sources */,
 				9C3B881627B81F5F00F36A35 /* LayoutMarginsViewController.swift in Sources */,
 				9C3B881427B81CB800F36A35 /* MarginGuidesViewController.swift in Sources */,
 				9C3B87FD27B807E900F36A35 /* AppDelegate.swift in Sources */,
