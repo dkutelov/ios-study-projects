@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1A6DA227B9408B00A165B7 /* IntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DA127B9408B00A165B7 /* IntrinsicContentSize.swift */; };
 		9C3B882C27B90B1A00F36A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882B27B90B1A00F36A35 /* AppDelegate.swift */; };
 		9C3B882E27B90B1A00F36A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882D27B90B1A00F36A35 /* SceneDelegate.swift */; };
 		9C3B883027B90B1A00F36A35 /* AnchorBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882F27B90B1A00F36A35 /* AnchorBasic.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C1A6DA127B9408B00A165B7 /* IntrinsicContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicContentSize.swift; sourceTree = "<group>"; };
 		9C3B882827B90B1A00F36A35 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3B882B27B90B1A00F36A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3B882D27B90B1A00F36A35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				9C8CB70127B9102F004E2C58 /* MarginGuides.swift */,
 				9C8CB70327B91076004E2C58 /* ReadableContent.swift */,
 				9C8CB70527B910BE004E2C58 /* SafeAreaLab.swift */,
+				9C1A6DA127B9408B00A165B7 /* IntrinsicContentSize.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				9C8CB70427B91076004E2C58 /* ReadableContent.swift in Sources */,
 				9C3B882C27B90B1A00F36A35 /* AppDelegate.swift in Sources */,
 				9C8CB6FA27B90EF0004E2C58 /* Factories.swift in Sources */,
+				9C1A6DA227B9408B00A165B7 /* IntrinsicContentSize.swift in Sources */,
 				9C8CB70227B9102F004E2C58 /* MarginGuides.swift in Sources */,
 				9C3B882E27B90B1A00F36A35 /* SceneDelegate.swift in Sources */,
 				9C8CB6FE27B90F7D004E2C58 /* SpotifyChallenge.swift in Sources */,
