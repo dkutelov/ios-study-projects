@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C1A6DA227B9408B00A165B7 /* IntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DA127B9408B00A165B7 /* IntrinsicContentSize.swift */; };
+		9C1A6DA427B94AF000A165B7 /* CHCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DA327B94AF000A165B7 /* CHCR.swift */; };
 		9C3B882C27B90B1A00F36A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882B27B90B1A00F36A35 /* AppDelegate.swift */; };
 		9C3B882E27B90B1A00F36A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882D27B90B1A00F36A35 /* SceneDelegate.swift */; };
 		9C3B883027B90B1A00F36A35 /* AnchorBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882F27B90B1A00F36A35 /* AnchorBasic.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		9C1A6DA127B9408B00A165B7 /* IntrinsicContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicContentSize.swift; sourceTree = "<group>"; };
+		9C1A6DA327B94AF000A165B7 /* CHCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCR.swift; sourceTree = "<group>"; };
 		9C3B882827B90B1A00F36A35 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3B882B27B90B1A00F36A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3B882D27B90B1A00F36A35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		9C3B883F27B90B7400F36A35 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9C1A6DA327B94AF000A165B7 /* CHCR.swift */,
 				9C3B882F27B90B1A00F36A35 /* AnchorBasic.swift */,
 				9C8CB6FD27B90F7D004E2C58 /* SpotifyChallenge.swift */,
 				9C8CB6FF27B90FD0004E2C58 /* LayoutMargins.swift */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8CB70027B90FD0004E2C58 /* LayoutMargins.swift in Sources */,
+				9C1A6DA427B94AF000A165B7 /* CHCR.swift in Sources */,
 				9C8CB70627B910BE004E2C58 /* SafeAreaLab.swift in Sources */,
 				9C3B883027B90B1A00F36A35 /* AnchorBasic.swift in Sources */,
 				9C8CB70427B91076004E2C58 /* ReadableContent.swift in Sources */,
