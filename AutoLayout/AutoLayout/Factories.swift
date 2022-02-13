@@ -85,5 +85,6 @@ extension UIColor {
     static let darkTeal = UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 1)
     static let darkYellow = UIColor(red: 255/255, green: 204/255, blue: 0/255, alpha: 1)
     static let offBlack = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
+    static let spotifyGreen = UIColor(red: 28/255, green: 184/255, blue: 89/255, alpha: 1)
 }
 
