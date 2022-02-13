@@ -1,21 +1,22 @@
 //
-//  SafeAreaLabViewController.swift
-//  AutoLayouts
+//  SafeAreaLab.swift
+//  AutoLayout
 //
-//  Created by Dariy Kutelov on 12.02.22.
+//  Created by Dariy Kutelov on 13.02.22.
 //
 
 import UIKit
 
-class SafeAreaLabViewController: UIViewController {
-
+class SafeAreaLab: UIViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViews()
     }
     
-
+    
     private func setupViews() {
         let topLabel = makeLabel(withText: "TOP")
         let bottomLabel = makeLabel(withText: "BOTTOM")
@@ -34,7 +35,7 @@ class SafeAreaLabViewController: UIViewController {
                 constant: 8),
             // without safeAreaLayoutGuide is not visible
             topLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        
+            
             // Pin Bottom Label
             bottomLabel.bottomAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor,
@@ -50,7 +51,7 @@ class SafeAreaLabViewController: UIViewController {
             trailingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
-
+    
     private func makeLabel(withText text: String) -> UILabel {
         let label = UILabel()
         
@@ -63,5 +64,4 @@ class SafeAreaLabViewController: UIViewController {
         label.backgroundColor = .darkGray
         return label
     }
-    
 }

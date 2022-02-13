@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AutoLayouts
+//  AutoLayout
 //
-//  Created by Dariy Kutelov on 12.02.22.
+//  Created by Dariy Kutelov on 13.02.22.
 //
 
 import UIKit

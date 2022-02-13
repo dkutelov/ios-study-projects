@@ -1,21 +1,21 @@
 //
-//  MarginGuidesViewController.swift
-//  AutoLayouts
+//  MarginGuides.swift
+//  AutoLayout
 //
-//  Created by Dariy Kutelov on 12.02.22.
+//  Created by Dariy Kutelov on 13.02.22.
 //
 
 import UIKit
 
-class MarginGuidesViewController: UIViewController {
-
+class MarginGuides: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViews()
     }
     
-
+    
     private func setupViews() {
         let redView = UIView()
         redView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,4 +31,5 @@ class MarginGuidesViewController: UIViewController {
             redView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
         ])
     }
+    
 }

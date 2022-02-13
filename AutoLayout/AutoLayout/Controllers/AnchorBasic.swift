@@ -1,13 +1,13 @@
 //
 //  ViewController.swift
-//  AutoLayouts
+//  AutoLayout
 //
-//  Created by Dariy Kutelov on 12.02.22.
+//  Created by Dariy Kutelov on 13.02.22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class AnchorBasic: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
