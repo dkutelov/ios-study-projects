@@ -13,7 +13,6 @@
 		9C3B883527B90B1B00F36A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B883427B90B1B00F36A35 /* Assets.xcassets */; };
 		9C3B883827B90B1B00F36A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B883627B90B1B00F36A35 /* LaunchScreen.storyboard */; };
 		9C8CB6FA27B90EF0004E2C58 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB6F927B90EF0004E2C58 /* Factories.swift */; };
-		9C8CB6FC27B90F4A004E2C58 /* SpotifySolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB6FB27B90F4A004E2C58 /* SpotifySolution.swift */; };
 		9C8CB6FE27B90F7D004E2C58 /* SpotifyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB6FD27B90F7D004E2C58 /* SpotifyChallenge.swift */; };
 		9C8CB70027B90FD0004E2C58 /* LayoutMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB6FF27B90FD0004E2C58 /* LayoutMargins.swift */; };
 		9C8CB70227B9102F004E2C58 /* MarginGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB70127B9102F004E2C58 /* MarginGuides.swift */; };
@@ -30,7 +29,6 @@
 		9C3B883727B90B1B00F36A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3B883927B90B1B00F36A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8CB6F927B90EF0004E2C58 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
-		9C8CB6FB27B90F4A004E2C58 /* SpotifySolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySolution.swift; sourceTree = "<group>"; };
 		9C8CB6FD27B90F7D004E2C58 /* SpotifyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyChallenge.swift; sourceTree = "<group>"; };
 		9C8CB6FF27B90FD0004E2C58 /* LayoutMargins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutMargins.swift; sourceTree = "<group>"; };
 		9C8CB70127B9102F004E2C58 /* MarginGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginGuides.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				9C3B882F27B90B1A00F36A35 /* AnchorBasic.swift */,
-				9C8CB6FB27B90F4A004E2C58 /* SpotifySolution.swift */,
 				9C8CB6FD27B90F7D004E2C58 /* SpotifyChallenge.swift */,
 				9C8CB6FF27B90FD0004E2C58 /* LayoutMargins.swift */,
 				9C8CB70127B9102F004E2C58 /* MarginGuides.swift */,
@@ -172,7 +169,6 @@
 				9C8CB70227B9102F004E2C58 /* MarginGuides.swift in Sources */,
 				9C3B882E27B90B1A00F36A35 /* SceneDelegate.swift in Sources */,
 				9C8CB6FE27B90F7D004E2C58 /* SpotifyChallenge.swift in Sources */,
-				9C8CB6FC27B90F4A004E2C58 /* SpotifySolution.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

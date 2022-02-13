@@ -25,7 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //window.rootViewController = MarginGuides()
         //window.rootViewController = ReadableContent()
         //window.rootViewController = SafeAreaLab()
-        //window.rootViewController = SpotifySolution()
         
         window.rootViewController = SpotifyChallenge()
         window.backgroundColor = UIColor.black
