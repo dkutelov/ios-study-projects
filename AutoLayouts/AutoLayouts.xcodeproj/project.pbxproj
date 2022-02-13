@@ -15,6 +15,7 @@
 		9C3B880927B807EA00F36A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3B880727B807EA00F36A35 /* LaunchScreen.storyboard */; };
 		9C3B881227B8147200F36A35 /* SafeAreaLabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881127B8147200F36A35 /* SafeAreaLabViewController.swift */; };
 		9C3B881427B81CB800F36A35 /* MarginGuidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881327B81CB800F36A35 /* MarginGuidesViewController.swift */; };
+		9C3B881627B81F5F00F36A35 /* LayoutMarginsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B881527B81F5F00F36A35 /* LayoutMarginsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9C3B880A27B807EA00F36A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3B881127B8147200F36A35 /* SafeAreaLabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaLabViewController.swift; sourceTree = "<group>"; };
 		9C3B881327B81CB800F36A35 /* MarginGuidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginGuidesViewController.swift; sourceTree = "<group>"; };
+		9C3B881527B81F5F00F36A35 /* LayoutMarginsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutMarginsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				9C3B880027B807E900F36A35 /* ViewController.swift */,
 				9C3B881127B8147200F36A35 /* SafeAreaLabViewController.swift */,
 				9C3B881327B81CB800F36A35 /* MarginGuidesViewController.swift */,
+				9C3B881527B81F5F00F36A35 /* LayoutMarginsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				9C3B881227B8147200F36A35 /* SafeAreaLabViewController.swift in Sources */,
 				9C3B880127B807E900F36A35 /* ViewController.swift in Sources */,
+				9C3B881627B81F5F00F36A35 /* LayoutMarginsViewController.swift in Sources */,
 				9C3B881427B81CB800F36A35 /* MarginGuidesViewController.swift in Sources */,
 				9C3B87FD27B807E900F36A35 /* AppDelegate.swift in Sources */,
 				9C3B87FF27B807E900F36A35 /* SceneDelegate.swift in Sources */,
