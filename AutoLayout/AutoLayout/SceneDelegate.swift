@@ -30,8 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //window.rootViewController = IntrinsicContentSize()
         //window.rootViewController = CHCR()
         //window.rootViewController = ImageLab()
+        //window.rootViewController = SpotifyPlayer()
         
-        window.rootViewController = SpotifyPlayer()
+        window.rootViewController = StackViewDemo()
         window.backgroundColor = UIColor.black
         window.makeKeyAndVisible()
         
