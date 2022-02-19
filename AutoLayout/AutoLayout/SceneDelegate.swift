@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //window.rootViewController = ImageLab()
         //window.rootViewController = SpotifyPlayer()
         
-        window.rootViewController = StackViewDemo()
+        window.rootViewController = StackViewDemoTwo()
         window.backgroundColor = UIColor.black
         window.makeKeyAndVisible()
         

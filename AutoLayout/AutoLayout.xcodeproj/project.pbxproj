@@ -12,6 +12,7 @@
 		9C1A6DA627B9533500A165B7 /* ImageLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DA527B9533500A165B7 /* ImageLab.swift */; };
 		9C1A6DA827B95C7200A165B7 /* SpotifyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DA727B95C7200A165B7 /* SpotifyPlayer.swift */; };
 		9C1A6DAC27BABC9900A165B7 /* StackViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DAB27BABC9900A165B7 /* StackViewDemo.swift */; };
+		9C1A6DAE27BAC3F100A165B7 /* StackViewDemoTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A6DAD27BAC3F100A165B7 /* StackViewDemoTwo.swift */; };
 		9C3B882C27B90B1A00F36A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882B27B90B1A00F36A35 /* AppDelegate.swift */; };
 		9C3B882E27B90B1A00F36A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882D27B90B1A00F36A35 /* SceneDelegate.swift */; };
 		9C3B883027B90B1A00F36A35 /* AnchorBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B882F27B90B1A00F36A35 /* AnchorBasic.swift */; };
@@ -31,6 +32,7 @@
 		9C1A6DA527B9533500A165B7 /* ImageLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLab.swift; sourceTree = "<group>"; };
 		9C1A6DA727B95C7200A165B7 /* SpotifyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayer.swift; sourceTree = "<group>"; };
 		9C1A6DAB27BABC9900A165B7 /* StackViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewDemo.swift; sourceTree = "<group>"; };
+		9C1A6DAD27BAC3F100A165B7 /* StackViewDemoTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewDemoTwo.swift; sourceTree = "<group>"; };
 		9C3B882827B90B1A00F36A35 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3B882B27B90B1A00F36A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3B882D27B90B1A00F36A35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				9C1A6DA527B9533500A165B7 /* ImageLab.swift */,
 				9C1A6DA727B95C7200A165B7 /* SpotifyPlayer.swift */,
 				9C1A6DAB27BABC9900A165B7 /* StackViewDemo.swift */,
+				9C1A6DAD27BAC3F100A165B7 /* StackViewDemoTwo.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				9C1A6DA427B94AF000A165B7 /* CHCR.swift in Sources */,
 				9C8CB70627B910BE004E2C58 /* SafeAreaLab.swift in Sources */,
 				9C3B883027B90B1A00F36A35 /* AnchorBasic.swift in Sources */,
+				9C1A6DAE27BAC3F100A165B7 /* StackViewDemoTwo.swift in Sources */,
 				9C8CB70427B91076004E2C58 /* ReadableContent.swift in Sources */,
 				9C3B882C27B90B1A00F36A35 /* AppDelegate.swift in Sources */,
 				9C8CB6FA27B90EF0004E2C58 /* Factories.swift in Sources */,
